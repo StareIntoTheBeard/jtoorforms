@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+name: <%= @shirt.customer_name %><br>
+number:<%= @shirt.phone_number %><br>
+
+<%= link_to "pdf this up", pdf_path(@shirt) %>
+
+
+<%= link_to 'Edit', edit_shirt_path(@shirt) %> |
+<%= link_to 'Back', shirts_path %>

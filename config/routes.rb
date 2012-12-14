@@ -3,7 +3,10 @@ Jtoor::Application.routes.draw do
 
   resources :shirts 
 
-  match 'shirts/:id/pdf' => 'shirts#pdf2drop', :as => 'pdf'
+  match 'shirts/:id/pdf' => 'shirts#pdfit', :as => 'pdf'
+
+  match 'shirts/:id/upload' => 'shirts#upload', :as => 'shirt_upload'
+  match 'authorize' => 'db#authorize', :as => 'authorize'
 
   resources :forms
 

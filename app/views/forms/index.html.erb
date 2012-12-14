@@ -1,5 +1,5 @@
 <h1>J Toor Forms</h1>
-
+<%= link_to 'authorize dropbox', authorize_path unless session[:dropbox_session] %>
 <div>
   <%= link_to "Fill out a Shirt form", new_shirt_path %>
 </div>

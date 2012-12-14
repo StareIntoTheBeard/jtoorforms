@@ -6,11 +6,11 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'thin'
 gem 'pg'
-gem 'paperclip'
-gem 'dropbox'
-gem 'paperclip-dropbox'
 gem 'pdfkit'
+gem 'json'
+gem 'oauth'
 gem 'libv8', '~> 3.11.8'
+gem 'dropbox-sdk'
 
 # Gems used only for assets and not required
 # in production environments by default.

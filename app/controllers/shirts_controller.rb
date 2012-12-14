@@ -1,6 +1,7 @@
 class ShirtsController < ApplicationController
   # GET /shirts
   # GET /shirts.json
+  before_filter :turntopdf, :only => [:pdfit, :upload]
 
   def index
     @shirts = Shirt.all
@@ -22,20 +23,29 @@ class ShirtsController < ApplicationController
     end
   end
 
-  def pdf2drop
-    @shirt = Shirt.find(params[:id])
-    # hey = @shirt.map{|field| "field:" + field[1].to_s }
-    @output = ''
-      for attribute in @shirt.attributes.keys 
-       @output += attribute.humanize 
-       @output += ': '
-       @output += @shirt.attributes[attribute].to_s
-       @output += '<br>'
-      end 
-    kit = PDFKit.new(@output)
-    file = kit.to_pdf
-    send_data file, :filename => "whatever.pdf", :type => "application/pdf", :disposition  => "attachment", :notice => "You pdf'd it."
+  def pdfit
+    send_data @thepdf, :filename => @filename, :type => "application/pdf", :disposition  => "attachment", :notice => "You pdf'd it."
   end
+
+  def upload
+      # Check if user has no dropbox session...re-direct them to authorize
+    return redirect_to(authorize_path) unless session[:dropbox_session]
+    dbsession = DropboxSession.deserialize(session[:dropbox_session])
+    client = DropboxClient.new(dbsession, ACCESS_TYPE) #raise an exception if session not authorized
+    info = client.account_info # look up account information
+
+    if request.method != "POST"
+        # show a file upload page
+        render :inline =>
+            "#{info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag %><% end %>"
+        return
+    else
+      resp = client.put_file(@filename, @thepdf)
+      redirect_to shirt_url(@shirt), :notice => "Upload successful! File now at #{resp['path']}"
+    end
+  end
+
+
 
   # GET /shirts/new
   # GET /shirts/new.json
@@ -96,5 +106,26 @@ class ShirtsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def turntopdf
+      @shirt = Shirt.find(params[:id])
+      # hey = @shirt.map{|field| "field:" + field[1].to_s }
+      @output = ''
+      @keys = @shirt.attributes.keys 
+      delete_keys = ['id', 'created_at', 'updated_at', 'form_file_name', 'form_content_type', 'form_file_size', 'form_updated_at']
+      delete_keys.each do |del|
+        @keys.delete_at(@keys.index(del))
+      end
+      for attribute in @keys
+        @output += attribute.humanize 
+        @output += ': '
+        @output += @shirt.attributes[attribute].to_s
+        @output += '<br>'
+      end 
+      kit = PDFKit.new(@output)
+      @thepdf = kit.to_pdf
+      @filename = 'Shirt' +@shirt.id.to_s + '.pdf'
+    end
 
 end

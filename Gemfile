@@ -11,6 +11,7 @@ gem 'json'
 gem 'oauth'
 gem 'libv8', '~> 3.11.8'
 gem 'dropbox-sdk'
+gem 'wkhtmltopdf-heroku'
 
 # Gems used only for assets and not required
 # in production environments by default.

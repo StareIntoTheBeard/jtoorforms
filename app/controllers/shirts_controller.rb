@@ -113,6 +113,7 @@ class ShirtsController < ApplicationController
       # hey = @shirt.map{|field| "field:" + field[1].to_s }
       @output = ''
       @keys = @shirt.attributes.keys 
+      # delete_keys = ['id', 'created_at', 'updated_at', 'form_file_name', 'form_content_type', 'form_file_size', 'form_updated_at']
       delete_keys = ['id', 'created_at', 'updated_at']
       delete_keys.each do |del|
         @keys.delete_at(@keys.index(del))

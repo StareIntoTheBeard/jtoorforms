@@ -2,13 +2,14 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Customer Name</th>
+    <th>Created At:</th>
   </tr>
 
 <% @shirts.each do |shirt| %>
   <tr>
+    <td><%= shirt.customer_name %></td>
+    <td><%= shirt.created_at %> </td>
     <td><%= link_to 'Show', shirt %></td>
     <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
     <td><%= link_to 'Destroy', shirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121212191124) do
+ActiveRecord::Schema.define(:version => 20121214214910) do
 
   create_table "forms", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -19,10 +19,29 @@ ActiveRecord::Schema.define(:version => 20121212191124) do
   end
 
   create_table "shirts", :force => true do |t|
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "customer_name"
     t.string   "phone_number"
+    t.string   "form_file_name"
+    t.string   "form_content_type"
+    t.integer  "form_file_size"
+    t.datetime "form_updated_at"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "email"
+    t.string   "measure_neck"
+    t.string   "measure_overarm"
+    t.string   "measure_chest"
+    t.string   "measure_stomach"
+    t.string   "measure_shoulder"
+    t.string   "measure_wrist"
+    t.string   "measure_bicep"
+    t.string   "measure_length"
+    t.string   "measure_sleeve"
+    t.string   "measure_hips"
   end
 
   create_table "suits", :force => true do |t|

@@ -12,8 +12,42 @@
   <% end %>
 
   <div class="actions">
-          <%= f.text_field :customer_name %>
-                <%= f.text_field :phone_number %>
+    <h2>Customer Information</h2>
+    <%= f.label :customer_name %>
+    <%= f.text_field :customer_name %> <br>
+    <%= f.label :phone_number %> 
+    <%= f.text_field :phone_number %><br>
+    <%= f.label :address %> 
+    <%= f.text_field :address %><br>
+    <%= f.label :city %> 
+    <%= f.text_field :city %><br>
+    <%= f.label :state %> 
+    <%= f.text_field :state %><br>
+    <%= f.label :zip %> 
+    <%= f.text_field :zip %><br>
+    <%= f.label :email %> 
+    <%= f.text_field :email %><br>
+    <h2>Measurements</h2>
+    <%= f.label :measure_neck %> 
+    <%= f.text_field :measure_neck %><br>
+    <%= f.label :measure_overarm %> 
+    <%= f.text_field :measure_overarm %><br>
+    <%= f.label :measure_chest %> 
+    <%= f.text_field :measure_chest %><br>
+    <%= f.label :measure_stomach %> 
+    <%= f.text_field :measure_stomach %><br>
+    <%= f.label :measure_shoulder %> 
+    <%= f.text_field :measure_shoulder %><br>
+    <%= f.label :measure_wrist %> 
+    <%= f.text_field :measure_wrist %><br>
+    <%= f.label :measure_bicep %> 
+    <%= f.text_field :measure_bicep %><br>
+    <%= f.label :measure_length %> 
+    <%= f.text_field :measure_length %><br>
+    <%= f.label :measure_sleeve %> 
+    <%= f.text_field :measure_sleeve %><br>
+    <%= f.label :measure_hips %> 
+    <%= f.text_field :measure_hips %><br>
     <%= f.submit %>
   </div>
 <% end %>

@@ -15,4 +15,5 @@ ACCESS_TYPE = :app_folder #The two valid values here are :app_folder and :dropbo
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
 end

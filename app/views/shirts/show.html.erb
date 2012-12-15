@@ -1,12 +1,20 @@
 <p id="notice"><%= notice %></p>
+<div>
+	<h2> Customer Information</h2>
+Customer Name: <%= @shirt.customer_name %><br>
+Phone Number:<%= @shirt.phone_number %><br>
+Address: <%= @shirt.address %><br>
+City: <%= @shirt.city %> <br>
+State: <%= @shirt.state %> <br>
+Zip: <%= @shirt.zip %> <br>
+Email: <%= @shirt.email %> <br>
+</div>
+<br>
 
-name: <%= @shirt.customer_name %><br>
-number:<%= @shirt.phone_number %><br>
+<%= link_to "Download PDF Form", pdf_path(@shirt) %><br>
+<%= link_to "Export to Dropbox as PDF", shirt_upload_path(@shirt), :method => :post %>
 
-<%= link_to "pdf this up", pdf_path(@shirt) %><br>
-<%= link_to "pdf to dropbox", shirt_upload_path(@shirt), :method => :post %>
-
-
+<br><br>
 
 
 <%= link_to 'Edit', edit_shirt_path(@shirt) %> |

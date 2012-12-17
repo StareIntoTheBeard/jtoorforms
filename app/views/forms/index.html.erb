@@ -1,12 +1,14 @@
 <h1>J Toor Forms</h1>
-<%= link_to 'authorize dropbox', authorize_path unless session[:dropbox_session] %>
+<% unless session[:dropbox_session] %>
+<%= link_to 'authorize dropbox', authorize_path  %>
+<% else %>
 <div>
   <%= link_to "Fill out a Shirt form", new_shirt_path %>
 </div>
 <div>
 <%= link_to "Fill out a Suit form", new_suit_path %>
 </div>
-
+<% end %>
 <br /><br />
 <div>
   View Completed Forms
@@ -17,3 +19,4 @@
 <div>
   <%= link_to "Suits", suits_path %>
 </div>
+

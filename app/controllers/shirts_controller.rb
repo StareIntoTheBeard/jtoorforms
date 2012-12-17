@@ -124,6 +124,11 @@ class ShirtsController < ApplicationController
         @output += @shirt.attributes[attribute].to_s
         @output += '<br>'
       end 
+
+      @output  +='Front Image: <br> <img src ="' + @shirt.photo_front.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_front_file_name == nil
+      @output  +='Side Image: <br> <img src ="' + @shirt.photo_side.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_side_file_name == nil
+      @output +='Back Image: <br> <img src ="' + @shirt.photo_back.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_back_file_name == nil
+      
       kit = PDFKit.new(@output)
       @thepdf = kit.to_pdf
       @filename = 'Shirt' +@shirt.id.to_s + '.pdf'

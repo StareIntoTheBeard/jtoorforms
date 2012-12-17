@@ -2,6 +2,10 @@
 
 name: <%= @shirt.customer_name %><br>
 number:<%= @shirt.phone_number %><br>
+<%= image_tag @shirt.photo_front, :height => "200px", :width =>"200px" unless @shirt.photo_front_file_name == nil  %><br>
+<%= image_tag @shirt.photo_side, :height => "200px", :width =>"200px" unless @shirt.photo_side_file_name == nil %><br>
+<%= image_tag @shirt.photo_back, :height => "200px", :width =>"200px" unless @shirt.photo_back_file_name == nil %><br>
+
 
 <%= link_to "pdf this up", pdf_path(@shirt) %><br>
 <%= link_to "pdf to dropbox", shirt_upload_path(@shirt), :method => :post %>

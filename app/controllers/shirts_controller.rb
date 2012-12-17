@@ -40,7 +40,8 @@ class ShirtsController < ApplicationController
             "#{info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag %><% end %>"
         return
     else
-      resp = client.put_file(@filename, @thepdf)
+      @path = '/New Client Orders/'+@filename
+      resp = client.put_file(@path, @thepdf)
       redirect_to shirt_url(@shirt), :notice => "Upload successful! File now at #{resp['path']}"
     end
   end

@@ -14,9 +14,6 @@ Email: <%= @shirt.email %> <br>
 </div>
 <br>
 
-<%= link_to "pdf this up", pdf_path(@shirt) %><br>
-<%= link_to "pdf to dropbox", shirt_upload_path(@shirt), :method => :post %>
-
 <%= link_to "Download PDF Form", pdf_path(@shirt) %><br>
 <%= link_to "Export to Dropbox as PDF", shirt_upload_path(@shirt), :method => :post %>
 

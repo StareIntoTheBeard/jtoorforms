@@ -1,5 +1,6 @@
 class Shirt < ActiveRecord::Base
-  attr_accessible :phone_number, :customer_name, :photo_front, :photo_side, :photo_back
+  attr_accessible :phone_number, :customer_name, :address, :city, :state, :zip, :email, :measure_neck, :measure_overarm, :measure_chest,
+    :measure_stomach, :measure_shoulder, :measure_wrist, :measure_bicep, :measure_length, :measure_sleeve, :measure_hips, :photo_front, :photo_side, :photo_back
   default_scope :order => 'created_at ASC'
   has_attached_file :photo_front,
   	:storage => :dropbox,

@@ -23,10 +23,6 @@ ActiveRecord::Schema.define(:version => 20121217171725) do
     t.datetime "updated_at",               :null => false
     t.string   "customer_name"
     t.string   "phone_number"
-    t.string   "form_file_name"
-    t.string   "form_content_type"
-    t.integer  "form_file_size"
-    t.datetime "form_updated_at"
     t.string   "address"
     t.string   "city"
     t.string   "state"

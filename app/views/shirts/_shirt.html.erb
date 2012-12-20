@@ -20,12 +20,7 @@ Shirt Length:  <%= @shirt.measure_length %><br />
 Shirt Sleeve: <%= @shirt.measure_sleeve%> <br />
 Hips: <%= @shirt.measure_hips%> <br />
 
-<% if @shirtswitch  %>
-<h2>Photo Attachments </h2>
-	
-<%= image_tag @shirt.photo_front, :height => "200px", :width =>"200px" unless @shirt.photo_front_file_name == nil  %><br />
-<%= image_tag @shirt.photo_side, :height => "200px", :width =>"200px" unless @shirt.photo_side_file_name == nil %><br />
-<%= image_tag @shirt.photo_back, :height => "200px", :width =>"200px" unless @shirt.photo_back_file_name == nil %><br />
-<% end %>
+<%= photo_display(@shirt) %>
+
 </div>
 <br />

@@ -1,7 +1,6 @@
 class ShirtsController < ApplicationController
   # GET /shirts
   # GET /shirts.json
-  before_filter :shirtswitch, :only => [:show, :turntopdf]
   before_filter :turntopdf, :only => [:pdfit, :upload]
 
 
@@ -17,7 +16,7 @@ class ShirtsController < ApplicationController
   # GET /shirts/1
   # GET /shirts/1.json
   def show
-
+@shirt = Shirt.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @shirt }
@@ -110,11 +109,7 @@ class ShirtsController < ApplicationController
   end
 
     def turntopdf
-      #TODO: refactor this shirtswitch code
      @shirt = Shirt.find(params[:id])
-      if @shirt.photo_front or @shirt.photo_side or @shirt.photo_back 
-        @shirtswitch = true
-      end
       @output = render_to_string :partial => 'shirt'
       # hey = @shirt.map{|field| "field:" + field[1].to_s }
       # @output = ''
@@ -138,13 +133,6 @@ class ShirtsController < ApplicationController
       kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')
       @thepdf = kit.to_pdf
       @filename = 'Shirt' +@shirt.id.to_s + '.pdf'
-    end
-    
-    def shirtswitch
-      @shirt = Shirt.find(params[:id])
-      if @shirt.photo_front or @shirt.photo_side or @shirt.photo_back 
-        @shirtswitch = true
-      end
     end
 
 end

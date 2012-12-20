@@ -1,18 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div>
-	<h2> Customer Information</h2>
-Customer Name: <%= @shirt.customer_name %><br>
-Phone Number:<%= @shirt.phone_number %><br>
-Address: <%= @shirt.address %><br>
-City: <%= @shirt.city %> <br>
-State: <%= @shirt.state %> <br>
-Zip: <%= @shirt.zip %> <br>
-Email: <%= @shirt.email %> <br>
-<%= image_tag @shirt.photo_front, :height => "200px", :width =>"200px" unless @shirt.photo_front_file_name == nil  %><br>
-<%= image_tag @shirt.photo_side, :height => "200px", :width =>"200px" unless @shirt.photo_side_file_name == nil %><br>
-<%= image_tag @shirt.photo_back, :height => "200px", :width =>"200px" unless @shirt.photo_back_file_name == nil %><br>
-</div>
-<br>
+<%= render 'shirt' %>
 
 <%= link_to "Download PDF Form", pdf_path(@shirt) %><br>
 <%= link_to "Export to Dropbox as PDF", shirt_upload_path(@shirt), :method => :post %>

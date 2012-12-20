@@ -1,7 +1,9 @@
 class ShirtsController < ApplicationController
   # GET /shirts
   # GET /shirts.json
+  before_filter :shirtswitch, :only => [:show, :turntopdf]
   before_filter :turntopdf, :only => [:pdfit, :upload]
+
 
   def index
     @shirts = Shirt.all
@@ -15,7 +17,6 @@ class ShirtsController < ApplicationController
   # GET /shirts/1
   # GET /shirts/1.json
   def show
-    @shirt = Shirt.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -108,31 +109,42 @@ class ShirtsController < ApplicationController
     end
   end
 
-  private
     def turntopdf
-      @shirt = Shirt.find(params[:id])
-      # hey = @shirt.map{|field| "field:" + field[1].to_s }
-      @output = ''
-      @keys = @shirt.attributes.keys 
-      # delete_keys = ['id', 'created_at', 'updated_at', 'form_file_name', 'form_content_type', 'form_file_size', 'form_updated_at']
-      delete_keys = ['id', 'created_at', 'updated_at']
-      delete_keys.each do |del|
-        @keys.delete_at(@keys.index(del))
+      #TODO: refactor this shirtswitch code
+     @shirt = Shirt.find(params[:id])
+      if @shirt.photo_front or @shirt.photo_side or @shirt.photo_back 
+        @shirtswitch = true
       end
-      for attribute in @keys
-        @output += attribute.humanize 
-        @output += ': '
-        @output += @shirt.attributes[attribute].to_s
-        @output += '<br>'
-      end 
+      @output = render_to_string :partial => 'shirt'
+      # hey = @shirt.map{|field| "field:" + field[1].to_s }
+      # @output = ''
+      # @keys = @shirt.attributes.keys 
+      # # delete_keys = ['id', 'created_at', 'updated_at', 'form_file_name', 'form_content_type', 'form_file_size', 'form_updated_at']
+      # delete_keys = ['id', 'created_at', 'updated_at']
+      # delete_keys.each do |del|
+      #   @keys.delete_at(@keys.index(del))
+      # end
+      # for attribute in @keys
+      #   @output += attribute.humanize 
+      #   @output += ': '
+      #   @output += @shirt.attributes[attribute].to_s
+      #   @output += '<br>'
+      # end 
 
-      @output  +='Front Image: <br> <img src ="' + @shirt.photo_front.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_front_file_name == nil
-      @output  +='Side Image: <br> <img src ="' + @shirt.photo_side.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_side_file_name == nil
-      @output +='Back Image: <br> <img src ="' + @shirt.photo_back.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_back_file_name == nil
+      # @output  +='Front Image: <br> <img src ="' + @shirt.photo_front.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_front_file_name == nil
+      # @output  +='Side Image: <br> <img src ="' + @shirt.photo_side.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_side_file_name == nil
+      # @output +='Back Image: <br> <img src ="' + @shirt.photo_back.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_back_file_name == nil
       
-      kit = PDFKit.new(@output, :page_size => 'Letter')
+      kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')
       @thepdf = kit.to_pdf
       @filename = 'Shirt' +@shirt.id.to_s + '.pdf'
+    end
+    
+    def shirtswitch
+      @shirt = Shirt.find(params[:id])
+      if @shirt.photo_front or @shirt.photo_side or @shirt.photo_back 
+        @shirtswitch = true
+      end
     end
 
 end

@@ -22,17 +22,17 @@
 
 <div id="shoulder_type">
 	<h2>Shoulder Type</h2>
-	<%= @shirt.shoulder_type.humanize.titlecase %> <br />
+	<%= @shirt.shoulder_type.humanize.titlecase if @shirt.shoulder_type %> <br />
 </div>
 
 <div id="balance_figure">
 	<h2>Balance Figure</h2>
-	<%= @shirt.balance_figure.humanize.titlecase %> <br />
+	<%= @shirt.balance_figure.humanize.titlecase if @shirt.balance_figure %> <br />
 </div>
 
 <div id="fitting">
 	<h2>Fitting</h2>
-	<%= @shirt.fitting.humanize.titlecase %> <br />
+	<%= @shirt.fitting.humanize.titlecase if @shirt.fitting %> <br />
 </div>
 
 
@@ -56,13 +56,13 @@
 
 <div id="cuff_style">
 	<h2>Cuff Style</h2>
-	<%= @shirt.cuff_style.humanize.titlecase %> <br />
+	<%= @shirt.cuff_style.humanize.titlecase if @shirt.cuff_style %> <br />
 </div>
 
 
 <div id="collar_style">
 	<h2>Collar Style</h2>
-	<%= @shirt.collar_style.humanize.titlecase %> <br />
+	<%= @shirt.collar_style.humanize.titlecase if @shirt.collar_style %> <br />
 </div>
 
 <div id="buttons">
@@ -74,12 +74,12 @@
 
 <div id="pockets">
 	<h2>Pockets</h2>
-	<%= @shirt.pockets.humanize.titlecase %> <br />
+	<%= @shirt.pockets.humanize.titlecase if @shirt.pockets %> <br />
 </div>
 
 <div id="detailing">
 	<h2>Detailing</h2>
-	Detailing Type: <%= @shirt.detailing.humanize.titlecase %> <br />
+	Detailing Type: <%= @shirt.detailing.humanize.titlecase if @shirt.detailing %> <br />
 	Detailing Color: <%= @shirt.detailing_color %> <br />
 </div>
 

@@ -8,8 +8,8 @@ require 'dropbox_sdk'
 # APP_SECRET = "a0pj795b0gy1fi4"
 # ACCESS_TYPE = :app_folder
 #prod below
-APP_KEY = "5akj4m5oce33eca"
-APP_SECRET = "l37kvlvg4efafka"
+APP_KEY = DROPBOX_CONFIG['app_key']
+APP_SECRET = DROPBOX_CONFIG['app_secret']
 ACCESS_TYPE = :dropbox 
 #The two valid values here are :app_folder and :dropbox
                           #The default is :app_folder, but your application might be

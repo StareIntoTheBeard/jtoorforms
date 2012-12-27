@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217171725) do
+ActiveRecord::Schema.define(:version => 20121222044052) do
 
   create_table "forms", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -19,14 +19,10 @@ ActiveRecord::Schema.define(:version => 20121217171725) do
   end
 
   create_table "shirts", :force => true do |t|
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "customer_name"
     t.string   "phone_number"
-    t.string   "form_file_name"
-    t.string   "form_content_type"
-    t.integer  "form_file_size"
-    t.datetime "form_updated_at"
     t.string   "address"
     t.string   "city"
     t.string   "state"
@@ -54,6 +50,28 @@ ActiveRecord::Schema.define(:version => 20121217171725) do
     t.string   "photo_back_content_type"
     t.integer  "photo_back_file_size"
     t.datetime "photo_back_updated_at"
+    t.string   "shoulder_type"
+    t.string   "balance_figure"
+    t.string   "fitting"
+    t.string   "shirt_material"
+    t.string   "material_collar"
+    t.string   "material_inner_collar"
+    t.string   "material_under_collar"
+    t.string   "material_buttonside_outer"
+    t.string   "material_buttonside_inner"
+    t.string   "material_cuffs"
+    t.string   "material_inner_cuffs"
+    t.string   "cuff_style"
+    t.string   "collar_style"
+    t.string   "button_color"
+    t.string   "button_stitching_color"
+    t.string   "button_hole_color"
+    t.string   "pockets"
+    t.string   "detailing"
+    t.text     "notes"
+    t.string   "detailing_color"
+    t.string   "material_buttonholeside_outer"
+    t.string   "material_buttonholeside_inner"
   end
 
   create_table "suits", :force => true do |t|

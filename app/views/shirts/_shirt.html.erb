@@ -1,0 +1,95 @@
+<div id="customer_info">
+	<h2> Customer Information</h2>
+	Customer Name: <%= @shirt.customer_name %>  Phone Number:<%= @shirt.phone_number %><br />
+	Address: <%= @shirt.address %> City: <%= @shirt.city %> <br />
+	State: <%= @shirt.state %>
+	Zip: <%= @shirt.zip %>
+	Email: <%= @shirt.email %> <br />
+</div>
+<div id="shirt_measurements">
+	<h2>Shirt Measurements</h2>
+	Neck: <%= @shirt.measure_neck	%> <br />
+	Overarm: <%= @shirt.measure_overarm%> <br />
+	Chest:  <%= @shirt.measure_chest%> <br />
+	Stomach:  <%= @shirt.measure_stomach%><br />
+	Shoulder to Shoulder:  <%= @shirt.measure_shoulder%><br />
+	Wrist/Cuff: <%= @shirt.measure_wrist%> <br />
+	Bicep:  <%= @shirt.measure_bicep%><br />
+	Shirt Length:  <%= @shirt.measure_length %><br />
+	Shirt Sleeve: <%= @shirt.measure_sleeve%> <br />
+	Hips: <%= @shirt.measure_hips%> <br />
+</div>
+
+<div id="shoulder_type">
+	<h2>Shoulder Type</h2>
+	<%= @shirt.shoulder_type.humanize.titlecase if @shirt.shoulder_type %> <br />
+</div>
+
+<div id="balance_figure">
+	<h2>Balance Figure</h2>
+	<%= @shirt.balance_figure.humanize.titlecase if @shirt.balance_figure %> <br />
+</div>
+
+<div id="fitting">
+	<h2>Fitting</h2>
+	<%= @shirt.fitting.humanize.titlecase if @shirt.fitting %> <br />
+</div>
+
+
+<div id="shirt_material">
+	<h2>Shirt Material</h2>
+	<%= @shirt.shirt_material %> <br />
+</div>
+
+<div id="material_details">
+	<h2>Material Details</h2>
+	Collar: <%= @shirt.material_collar %> <br />
+	Inner Collar: <%= @shirt.material_inner_collar %> <br />
+	Under Collar: <%= @shirt.material_under_collar %> <br />
+	Button-side Outer: <%= @shirt.material_buttonside_outer %> <br />
+	Button-side Inner: <%= @shirt.material_buttonside_inner %> <br />
+	Buttonhole-side Outer: <%= @shirt.material_buttonholeside_outer %> <br />
+	Buttonhole-side Inner: <%= @shirt.material_buttonholeside_inner %> <br />
+	Cuffs: <%= @shirt.material_cuffs %> <br />
+	Inner Cuffs: <%= @shirt.material_inner_cuffs %> <br />
+</div>
+
+<div id="cuff_style">
+	<h2>Cuff Style</h2>
+	<%= @shirt.cuff_style.humanize.titlecase if @shirt.cuff_style %> <br />
+</div>
+
+
+<div id="collar_style">
+	<h2>Collar Style</h2>
+	<%= @shirt.collar_style.humanize.titlecase if @shirt.collar_style %> <br />
+</div>
+
+<div id="buttons">
+	<h2>Buttons</h2>
+	Button Color: <%= @shirt.button_color %> <br />
+	Button Stitching Color: <%= @shirt.button_stitching_color %> <br />
+	Button Hole Color: <%= @shirt.button_hole_color %> <br />
+</div>
+
+<div id="pockets">
+	<h2>Pockets</h2>
+	<%= @shirt.pockets.humanize.titlecase if @shirt.pockets %> <br />
+</div>
+
+<div id="detailing">
+	<h2>Detailing</h2>
+	Detailing Type: <%= @shirt.detailing.humanize.titlecase if @shirt.detailing %> <br />
+	Detailing Color: <%= @shirt.detailing_color %> <br />
+</div>
+
+<div id="notes">
+	<h2>Notes</h2>
+ 	<%= @shirt.notes %> <br />
+</div>
+
+
+<div id="photo_display">
+	<%= photo_display(@shirt) %>
+</div>
+<br />

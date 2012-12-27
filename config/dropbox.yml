@@ -1,6 +1,14 @@
-app_key: 5akj4m5oce33eca
-app_secret: l37kvlvg4efafka
-access_token: 4gompz2huizz4i4
-access_token_secret: mv3fxhdny2fmtga
-user_id: 6620118
-access_type: dropbox
+development:
+    app_key: 5akj4m5oce33eca
+    app_secret: l37kvlvg4efafka
+    access_token: 4gompz2huizz4i4
+    access_token_secret: mv3fxhdny2fmtga
+    user_id: 6620118
+    access_type: dropbox
+production:
+    app_key: ozb76lkz6dbrwi9
+    app_secret: qu6q2k0b6oktutt
+    access_token: w5unn4ksi6k4zdn
+    access_token_secret: mwcqx0yrezvi0bw
+    user_id: 90539904
+    access_type: dropbox

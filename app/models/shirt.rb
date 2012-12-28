@@ -12,18 +12,18 @@ class Shirt < ActiveRecord::Base
   	:storage => :dropbox,
     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
     :dropbox_options => {
-    	:path => proc { |style| "#{id}/#{photo_front.original_filename}" }
+    	:path => proc { |style| "shirts/#{id}/#{photo_front.original_filename}" }
     }
   has_attached_file :photo_side,
  	:storage => :dropbox,
     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
     :dropbox_options => {
-    	:path => proc { |style| "#{id}/#{photo_side.original_filename}" }
+    	:path => proc { |style| "shirts/#{id}/#{photo_side.original_filename}" }
     }
   has_attached_file :photo_back,
   	:storage => :dropbox,
     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
     :dropbox_options => {
-    	:path => proc { |style| "#{id}/#{photo_back.original_filename}" }
+    	:path => proc { |style| "shirts/#{id}/#{photo_back.original_filename}" }
     }
 end

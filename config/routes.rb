@@ -6,6 +6,11 @@ Jtoor::Application.routes.draw do
   match 'shirts/:id/pdf' => 'shirts#pdfit', :as => 'pdf'
 
   match 'shirts/:id/upload' => 'shirts#upload', :as => 'shirt_upload'
+
+  match 'suits/:id/pdf' => 'suits#pdfit', :as => 'suit_pdf'
+
+  match 'suits/:id/upload' => 'suits#upload', :as => 'suit_upload'
+
   match 'authorize' => 'db#authorize', :as => 'authorize'
 
   resources :forms

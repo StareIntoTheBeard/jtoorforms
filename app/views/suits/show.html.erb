@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'suit' %>
+
+<%= link_to "Download PDF Form", suit_pdf_path(@suit) %><br>
+<%= link_to "Export to Dropbox as PDF", suit_upload_path(@suit), :method => :post %>
+
+<br><br>
 
 <%= link_to 'Edit', edit_suit_path(@suit) %> |
 <%= link_to 'Back', suits_path %>

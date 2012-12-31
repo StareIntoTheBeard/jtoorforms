@@ -131,6 +131,7 @@ class ShirtsController < ApplicationController
       # @output +='Back Image: <br> <img src ="' + @shirt.photo_back.to_s + '" height= "200px" width ="200px">' unless @shirt.photo_back_file_name == nil
       
       kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')
+      kit.stylesheets << 'public/assets/application.css'
       @thepdf = kit.to_pdf
       @filename = 'Shirt' +@shirt.id.to_s + '.pdf'
     end

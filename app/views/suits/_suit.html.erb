@@ -1,0 +1,318 @@
+<div id="logo" class="blockfield">
+    <img src= <%= 'http://www.wupcdn.com/jtoor/jtoor.png' + "" %> >
+</div>
+
+    <div id="customerinfo" class="blockfield">
+    <h3>Customer Information</h3>
+        Customer Name:
+        <%= @suit.customer_name %>
+        Phone Number:
+        <%= @suit.phone_number %><br>
+        Address:
+        <%= @suit.address %>
+        City:
+        <%= @suit.city %><br>
+        State:
+        <%= @suit.state %>
+        Zip:
+        <%= @suit.zip %>
+        Email:
+        <%= @suit.email %><br>
+    </div>
+
+    <div id="jacketmeasurements" class="blockfield additionalpad">
+        <h3>Jacket Measurements</h3>
+        Neck:
+        <%= @suit.jacket_neck %><br>    
+        Overarm:
+        <%= @suit.jacket_overarm %><br>
+        Chest:
+        <%= @suit.jacket_chest %><br>
+        Stomach:
+        <%= @suit.jacket_stomach %><br>
+        Front: 
+        <%= @suit.jacket_front %><br>
+        Back:
+        <%= @suit.jacket_back %><br>
+        Shoulder to Shoulder:
+        <%= @suit.jacket_shoulder %><br>    
+        Bicep:
+        <%= @suit.jacket_bicep %><br>    
+        Width of Jacket Shoulder:
+        <%= @suit.jacket_width %><br>    
+        Jacket Length: 
+        <%= @suit.jacket_length %><br>    
+        Front Jacket Length:
+        <%= @suit.jacket_front_length %><br>
+        Half Shoulders:
+        <%= @suit.jacket_half_shoulder%><br>    
+        Coat Sleeve:
+        <%= @suit.jacket_sleeve %><br>    
+        Hips:
+        <%= @suit.jacket_hips %><br>    
+        Wrist/Cuff: 
+        <%= @suit.jacket_wrist %><br>    
+        Jacket 1st Button:
+        <%= @suit.jacket_first_button %><br>    
+        Vest Bottom Button Length:
+        <%= @suit.jacket_vest_button %><br>    
+        Vest Length:
+        <%= @suit.jacket_vest_length %><br>    
+        Fitting Vest Size: 
+        <%= @suit.jacket_vest_size %><br>   
+        Elbow Length:
+        <%= @suit.jacket_elbow %><br>    
+    </div>
+
+    <div id="jacket_shouldertype" class="blockfield additionalpad">
+        <h3>Shoulder Type</h3>
+        <%= @suit.shoulder_type%><br>
+
+    </div>
+
+    <div id="jacket_balancefigure" class="blockfield additionalpad">
+        <h3>Balance Figure</h3>
+        <%= @suit.balance_figure %><br>
+
+    </div>
+
+    <div id="jacket_fitting" class="blockfield additionalpad" style="margin-top:303px;">
+        <h3>Fitting</h3>
+        <%= @suit.fitting%><br>
+    </div>
+    <div id="trousermeasurements" class="blockfield additionalpad">
+        <h3>Trouser Measurements</h3>
+        Trouser Waist:
+        <%= @suit.trouser_waist %><br>
+        Hips:
+        <%= @suit.trouser_hips %><br>
+        Rise:
+        <%= @suit.trouser_rise %><br>
+        Trousers Length:
+        <%= @suit.trouser_length %><br>
+        Inseam:
+        <%= @suit.trouser_inseam %><br>
+        Knee Length:
+        <%= @suit.trouser_knee_length %><br>
+        Trousers Thigh Width:
+        <%= @suit.trouser_thigh_width %><br>
+        Trouser Knee Width:
+        <%= @suit.trouser_knee_width %><br>
+        Trouser Bottom Width:
+        <%= @suit.trouser_bottom_width %><br>
+   </div>
+   <div id ="jacket_lining" class ="blockfield">
+        <h3>Lining</h3>
+        <%= @suit.lining %><br>
+    </div>
+
+    <div id ="suit_notes" class="blockfield">
+        <h3>Notes:</h3>
+        <%= @suit.suit_note %><br>
+    </div>
+    <div id="jacket_material" class="materialpad">
+        <h>Jacket</h>&nbsp;&nbsp;&nbsp;
+        <h>Material:</h>
+        <%= @suit.jacket_material %> &nbsp;&nbsp;
+        <h>Lining:</h>
+        <%= @suit.jacket_lining %>
+    </div>
+    <div id="jacket_undercollar" class="additionalpad">
+        <h>Under Collar</h>
+        <%= @suit.jacket_under_collar %><br>
+
+		Felt Color: 
+        <%= @suit.jacket_felt_color %>    
+        Logo Stitch Color: 
+        <%= @suit.jacket_logo_stitch_color %><br>
+    </div>
+    <div id ="jacket_singlebreasted" class="additionalpad">
+        <h4>Single Breasted</h4>
+        <%= @suit.jacket_single_breasted %><br>
+    </div>
+    <div id="jacket_doublebreasted" class="additionalpad">
+        <h4>Double Breasted</h4>
+        <%= @suit.jacket_double_breasted %><br>
+    </div>
+    <div id ="jacket_vent">
+        <h4>Vent</h4>
+        <%= @suit.jacket_vent %><br>
+
+    </div>
+    <div id="jacket_lapels">
+        <h4>Lapels</h4>
+        <%= @suit.jacket_lapels %><br>
+    </div>
+
+    <div id ="jacket_buttons" class="additionalpad">
+        <h4>Buttons</h4>
+        Button Color: 
+        <%= @suit.jacket_button_color %><br>    
+        Button Stitching Color:
+        <%= @suit.jacket_button_stitch %><br>
+        Buttonhole Color: 
+        <%= @suit.jacket_buttonhole %><br>
+        Lapel Buttonhole Color: 
+        <%= @suit.jacket_lapel_buttonhole %><br>
+    </div>
+
+    <div id ="jacket_pockets" class="additionalpad">
+        <h4>Pockets</h4>
+        Straight
+        <%= @suit.jacket_pockets_straight %><br>    
+        Slanted 
+        <%= @suit.jacket_pockets_slanted %><br>
+        Patched
+        <%= @suit.jacket_pockets_patched %><br>
+        Flaps
+        <%= @suit.jacket_pockets_flaps %><br>
+        Normal Chest
+        <%= @suit.jacket_pockets_normal %><br>
+        Patch Chest
+        <%= @suit.jacket_pockets_patch %><br>
+    </div>
+
+    <div id ="jacket_detailing">
+        <h4>Detailing</h4>
+        Hand Stitching 
+        <%= @suit.jacket_detailing_hand %><br>    
+        Pick Stitching
+        <%= @suit.jacket_detailing_pick %><br>
+        Dot Stitching
+        <%= @suit.jacket_detailing_dot %><br>
+        Piping
+        <%= @suit.jacket_detailing_piping %><br>
+        Welting 
+        <%= @suit.jacket_detailing_welting %>
+        Color:
+        <%= @suit.jacket_detailing_color %><br>
+        Elbow Patches 
+        <%= @suit.jacket_detailing_elbow %>
+        Note:
+        <%= @suit.jacket_detailing_elbow_note %><br>
+    </div>
+    <div id="jacket_note">
+        <h4>Notes:</h4>
+        <%= @suit.jacket_note %><br>    
+    </div>
+
+    <div id ="vest_material" class ="materialpad">
+        <h>Vest Material:</h>
+        <%= @suit.vest_material %><br>   
+    </div> 
+
+    <div id="vest_singlebreasted">
+        <h4>Single Breasted</h4>
+        <%= @suit.vest_single_breasted %><br>
+
+    </div>
+    <div id="vest_doublebreasted">
+        <h4>Double Breasted</h4>
+        <%= @suit.vest_double_breasted %><br>
+
+    </div>
+    <div id="vest_back">
+        <h4>Back</h4>
+        <%= @suit.vest_back %><br>
+    </div>
+    <div id="vest_lapels">
+        <h4>Lapels</h4>
+        <%= @suit.vest_lapel %><br>
+
+    </div>
+    <div id="vest_pockets">
+        <h4>Pockets</h4>
+        Straight
+        <%= @suit.vest_pockets_straight %><br>    
+        Slanted
+        <%= @suit.vest_pockets_slanted %><br>
+        Ticket 
+        <%= @suit.vest_pockets_ticket %><br>
+        Flaps
+        <%= @suit.vest_pockets_flaps %><br>
+        Chest
+        <%= @suit.vest_pockets_chest %><br>
+    </div>
+    <div id="vest_detailing">
+        <h4>Detailing</h4>
+        Hand Stitching
+        <%= @suit.vest_detailing_hand %><br>    
+        Pick Stitching
+        <%= @suit.vest_detailing_pick %><br>
+        Dot Stitching
+        <%= @suit.vest_detailing_dot %><br>
+        Piping
+        <%= @suit.vest_detailing_piping %><br>
+        Welting
+        <%= @suit.vest_detailing_welting %>
+        Color:
+        <%= @suit.jacket_detailing_color %><br>
+    </div>
+    <div id="vest_buttons">
+        <h4>Buttons</h4>
+        Button Color:
+        <%= @suit.vest_button_color %><br>    
+        Button Stitching Color:
+        <%= @suit.vest_button_stitch %><br>
+        Button Hole Color: 
+        <%= @suit.vest_buttonhole %><br>
+    </div>
+    <div id ="vest_note">
+        <h4>Notes:</h4>
+        <%= @suit.vest_note %><br> 
+    </div>
+    <div id="trouser_material" class="materialpad">
+       <h>Trousers Material:</h>
+        <%= @suit.trouser_material %><br>   
+    </div>        
+    <div id="trousers_frontpockets">
+        <h4>Front Pockets</h4>
+        <%= @suit.trouser_front_pocket%><br>
+    </div>
+
+    <div id="trousers_pleats">
+        <h4>Pleats</h4>
+        <%= @suit.trouser_pleat %><br>
+
+    </div>
+    <div id="trousers_rearpockets">
+        <h4>Rear Pockets</h4>
+        Left
+        <%= @suit.trouser_rear_left %><br>    
+        Right 
+        <%= @suit.trouser_rear_right %><br>
+        Flaps
+        <%= @suit.trouser_rear_flaps %><br>
+        Button
+        <%= @suit.trouser_rear_button %><br>
+        None
+        <%= @suit.trouser_rear_none  %><br>
+    </div>
+
+    <div id="trousers_fasteners">
+        <h4>Fastener</h4>
+        Buttons
+        <%= @suit.trouser_fast_button %><br>    
+        Clips
+        <%= @suit.trouser_fast_clips %><br>
+        Belt Loops 
+        <%= @suit.trouser_fast_belt %><br>
+        Side Metal Fasteners
+        <%= @suit.trouser_fast_side %><br>
+    </div>
+
+    <div id="trousers_cuff">
+        <h4>Cuff</h4>
+        None
+        <%= @suit.trouser_cuff_none %><br>
+        Other
+        <%= @suit.trouser_cuff_other %>    
+        <%= @suit.trouser_cuff_other_note %><br> 
+    </div>
+    <div id="trousers_note">
+        <h4>Notes</h4>
+        <%= @suit.trouser_note %><br> 
+    </div>
+    <div id="suit_attach">
+		<%= photo_display(@suit) %>
+    </div>

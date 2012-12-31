@@ -2,7 +2,9 @@
 <%= render 'shirt' %>
 
 <%= link_to "Download PDF Form", pdf_path(@shirt) %><br>
+<% if session[:dropbox_session] %>
 <%= link_to "Export to Dropbox as PDF", shirt_upload_path(@shirt), :method => :post %>
+<% end %>
 
 <br><br>
 

@@ -1,3 +1,7 @@
+<div id="logo" class="blockfield">
+    <%= image_tag 'jtoor.png' %>
+</div>
+
 <%= form_for(@suit) do |f| %>
   <% if @suit.errors.any? %>
     <div id="error_explanation">
@@ -12,331 +16,397 @@
   <% end %>
 
   <div class="actions">
+    <div id="customerinfo" class="blockfield">
     <h3>Customer Information</h3>
-    <%= f.label :customer_name %>
-    <%= f.text_field :customer_name %> <br>
-    <%= f.label :phone_number %> 
-    <%= f.text_field :phone_number %><br>
-    <%= f.label :address %> 
-    <%= f.text_field :address %><br>
-    <%= f.label :city %> 
-    <%= f.text_field :city %><br>
-    <%= f.label :state %> 
-    <%= f.text_field :state %><br>
-    <%= f.label :zip %> 
-    <%= f.text_field :zip %><br>
-    <%= f.label :email %> 
-    <%= f.text_field :email %><br>
+        <%= f.label :customer_name %>
+        <%= f.text_field :customer_name %>
+        <%= f.label :phone_number %> 
+        <%= f.text_field :phone_number %><br>
+        <%= f.label :address %> 
+        <%= f.text_field :address %>
+        <%= f.label :city %> 
+        <%= f.text_field :city %><br>
+        <%= f.label :state %> 
+        <%= f.text_field :state %>
+        <%= f.label :zip %> 
+        <%= f.text_field :zip %>
+        <%= f.label :email %> 
+        <%= f.text_field :email %><br>
+    </div>
 
-    <h3>Jacket Measurements</h3>
-    <%= f.label :jacket_neck, "Neck:" %> 
-    <%= f.text_field :jacket_neck %><br>    
-    <%= f.label :jacket_overarm, "Overarm:" %> 
-    <%= f.text_field :jacket_overarm %><br>
-    <%= f.label :jacket_chest, "Chest:" %> 
-    <%= f.text_field :jacket_chest %><br>
-    <%= f.label :jacket_stomach, "Stomach:" %> 
-    <%= f.text_field :jacket_stomach %><br>
-    <%= f.label :jacket_front, "Front:" %> 
-    <%= f.text_field :jacket_front %><br>
-    <%= f.label :jacket_back, "Back:" %> 
-    <%= f.text_field :jacket_back %><br>
-    <%= f.label :jacket_shoulder, "Shoulder to Shoulder:" %> 
-    <%= f.text_field :jacket_shoulder %><br>    
-    <%= f.label :jacket_bicep, "Bicep:" %> 
-    <%= f.text_field :jacket_bicep %><br>    
-    <%= f.label :jacket_width, "Width of Jacket Shoulder:" %> 
-    <%= f.text_field :jacket_width %><br>    
-    <%= f.label :jacket_length, "Jacket Length:" %> 
-    <%= f.text_field :jacket_length %><br>    
-    <%= f.label :jacket_length, "Front Jacket Length:" %> 
-    <%= f.text_field :jacket_front_length %><br>
-    <%= f.label :jacket_half_shoulder, "Half Shoulders:" %> 
-    <%= f.text_field :jacket_half_shoulder%><br>    
-    <%= f.label :jacket_sleeve, "Coat Sleeve:" %> 
-    <%= f.text_field :jacket_sleeve %><br>    
-    <%= f.label :jacket_hips, "Hips:" %> 
-    <%= f.text_field :jacket_hips %><br>    
-    <%= f.label :jacket_wrist, "Wrist/Cuff:" %> 
-    <%= f.text_field :jacket_wrist %><br>    
-    <%= f.label :jacket_first_button, "Jacket 1st Button:" %> 
-    <%= f.text_field :jacket_first_button %><br>    
-    <%= f.label :jacket_vest_button, "Vest Bottom Button Length:" %> 
-    <%= f.text_field :jacket_vest_button %><br>    
-    <%= f.label :jacket_vest_length, "Vest Length:" %> 
-    <%= f.text_field :jacket_vest_length %><br>    
-    <%= f.label :jacket_vest_size, "Fitting Vest Size:" %> 
-    <%= f.text_field :jacket_vest_size %><br>   
-    <%= f.label :jacket_elbow, "Elbow Length:" %> 
-    <%= f.text_field :jacket_elbow %><br>    
+    <div id="jacketmeasurements" class="blockfield additionalpad">
+        <h3>Jacket Measurements</h3>
+        <%= f.label :jacket_neck, "Neck:" %> 
+        <%= f.text_field :jacket_neck %><br>    
+        <%= f.label :jacket_overarm, "Overarm:" %> 
+        <%= f.text_field :jacket_overarm %><br>
+        <%= f.label :jacket_chest, "Chest:" %> 
+        <%= f.text_field :jacket_chest %><br>
+        <%= f.label :jacket_stomach, "Stomach:" %> 
+        <%= f.text_field :jacket_stomach %><br>
+        <%= f.label :jacket_front, "Front:" %> 
+        <%= f.text_field :jacket_front %><br>
+        <%= f.label :jacket_back, "Back:" %> 
+        <%= f.text_field :jacket_back %><br>
+        <%= f.label :jacket_shoulder, "Shoulder to Shoulder:" %> 
+        <%= f.text_field :jacket_shoulder %><br>    
+        <%= f.label :jacket_bicep, "Bicep:" %> 
+        <%= f.text_field :jacket_bicep %><br>    
+        <%= f.label :jacket_width, "Width of Jacket Shoulder:" %> 
+        <%= f.text_field :jacket_width %><br>    
+        <%= f.label :jacket_length, "Jacket Length:" %> 
+        <%= f.text_field :jacket_length %><br>    
+        <%= f.label :jacket_length, "Front Jacket Length:" %> 
+        <%= f.text_field :jacket_front_length %><br>
+        <%= f.label :jacket_half_shoulder, "Half Shoulders:" %> 
+        <%= f.text_field :jacket_half_shoulder%><br>    
+        <%= f.label :jacket_sleeve, "Coat Sleeve:" %> 
+        <%= f.text_field :jacket_sleeve %><br>    
+        <%= f.label :jacket_hips, "Hips:" %> 
+        <%= f.text_field :jacket_hips %><br>    
+        <%= f.label :jacket_wrist, "Wrist/Cuff:" %> 
+        <%= f.text_field :jacket_wrist %><br>    
+        <%= f.label :jacket_first_button, "Jacket 1st Button:" %> 
+        <%= f.text_field :jacket_first_button %><br>    
+        <%= f.label :jacket_vest_button, "Vest Bottom Button Length:" %> 
+        <%= f.text_field :jacket_vest_button %><br>    
+        <%= f.label :jacket_vest_length, "Vest Length:" %> 
+        <%= f.text_field :jacket_vest_length %><br>    
+        <%= f.label :jacket_vest_size, "Fitting Vest Size:" %> 
+        <%= f.text_field :jacket_vest_size %><br>   
+        <%= f.label :jacket_elbow, "Elbow Length:" %> 
+        <%= f.text_field :jacket_elbow %><br>    
+    </div>
 
-    <h3>Shoulder Type</h3>
-    <%= f.label :shoulder_type, "Sloping Shoulders, Long Neck" %>
-    <%= f.radio_button :shoulder_type, :sloping_shoulders %><br>
-    <%= f.label :shoulder_type, "Square Shoulders, Short Neck" %>
-    <%= f.radio_button :shoulder_type, :square_shoulders %><br>
-    <%= f.label :shoulder_type, "Normal Shoulders, Normal Neck" %>
-    <%= f.radio_button :shoulder_type, :normal_shoulders %><br>
+    <div id="jacket_shouldertype" class="blockfield additionalpad">
+        <h3>Shoulder Type</h3>
+        <%= f.label :shoulder_type, "Sloping Shoulders, Long Neck" %>
+        <%= f.radio_button :shoulder_type, :sloping_shoulders %><br>
+        <%= f.label :shoulder_type, "Square Shoulders, Short Neck" %>
+        <%= f.radio_button :shoulder_type, :square_shoulders %><br>
+        <%= f.label :shoulder_type, "Normal Shoulders, Normal Neck" %>
+        <%= f.radio_button :shoulder_type, :normal_shoulders %><br>
+    </div>
 
-    <h3>Balance Figure</h3>
-    <%= f.label :balance_figure, "Erect/Full Chest" %>
-    <%= f.radio_button :balance_figure, :full_chest %><br>
-    <%= f.label :balance_figure, "Forward Neck" %>
-    <%= f.radio_button :balance_figure, :forward_neck %><br>
-    <%= f.label :balance_figure, "Normal Posture" %>
-    <%= f.radio_button :balance_figure, :normal_posture %><br>
-    <%= f.label :balance_figure, "Round Back" %>
-    <%= f.radio_button :balance_figure, :round_back %><br>
-    <%= f.label :balance_figure, "Forward Stomach/Stout" %>
-    <%= f.radio_button :balance_figure, :forward_stomach %><br>
+    <div id="jacket_balancefigure" class="blockfield additionalpad">
+        <h3>Balance Figure</h3>
+        <%= f.label :balance_figure, "Erect/Full Chest" %>
+        <%= f.radio_button :balance_figure, :full_chest %><br>
+        <%= f.label :balance_figure, "Forward Neck" %>
+        <%= f.radio_button :balance_figure, :forward_neck %><br>
+        <%= f.label :balance_figure, "Normal Posture" %>
+        <%= f.radio_button :balance_figure, :normal_posture %><br>
+        <%= f.label :balance_figure, "Round Back" %>
+        <%= f.radio_button :balance_figure, :round_back %><br>
+        <%= f.label :balance_figure, "Forward Stomach/Stout" %>
+        <%= f.radio_button :balance_figure, :forward_stomach %><br>
+    </div>
 
-    <h3>Fitting</h3>
-    <%= f.label :fitting, "Snug" %>
-    <%= f.radio_button :fitting, :snug %><br>
-    <%= f.label :fitting, "Comfortable" %>
-    <%= f.radio_button :fitting, :comfortable %><br>
-    <%= f.label :fitting, "Loosely Comfortable" %>
-    <%= f.radio_button :fitting, :loosely_comfortable %><br>
-    <%= f.label :fitting, "Very Loose" %>
-    <%= f.radio_button :fitting, :very_loose %><br>
-    <%= f.label :fitting, "Very Baggy" %>
-    <%= f.radio_button :fitting, :very_baggy %><br>
+    <div id="jacket_fitting" class="blockfield additionalpad">
+        <h3>Fitting</h3>
+        <%= f.label :fitting, "Snug" %>
+        <%= f.radio_button :fitting, :snug %><br>
+        <%= f.label :fitting, "Comfortable" %>
+        <%= f.radio_button :fitting, :comfortable %><br>
+        <%= f.label :fitting, "Loosely Comfortable" %>
+        <%= f.radio_button :fitting, :loosely_comfortable %><br>
+        <%= f.label :fitting, "Very Loose" %>
+        <%= f.radio_button :fitting, :very_loose %><br>
+        <%= f.label :fitting, "Very Baggy" %>
+        <%= f.radio_button :fitting, :very_baggy %><br>
+    </div>
+    <div id="trousermeasurements" class="blockfield additionalpad">
+        <h3>Trouser Measurements</h3>
+        <%= f.label :trouser_waist, "Trouser Waist:" %>
+        <%= f.text_field :trouser_waist %><br>
+        <%= f.label  :trouser_hips, "Hips:" %>
+        <%= f.text_field  :trouser_hips %><br>
+        <%= f.label :trouser_rise, "Rise:" %>
+        <%= f.text_field :trouser_rise %><br>
+        <%= f.label :trouser_length, "Trousers Length:" %>
+        <%= f.text_field :trouser_length %><br>
+        <%= f.label :trouser_inseam, "Inseam:" %>
+        <%= f.text_field :trouser_inseam %><br>
+        <%= f.label :trouser_knee_length, "Knee Length:" %>
+        <%= f.text_field :trouser_knee_length %><br>
+        <%= f.label :trouser_thigh_width, "Trousers Thigh Width:" %>
+        <%= f.text_field :trouser_thigh_width %><br>
+        <%= f.label :trouser_knee_width, "Trouser Knee Width:" %>
+        <%= f.text_field :trouser_knee_width %><br>
+        <%= f.label :trouser_bottom_width, "Trouser Bottom Width:" %>
+        <%= f.text_field :trouser_bottom_width %><br>
+   </div>
+   <div id ="jacket_lining" class ="blockfield">
+        <h3>Lining</h3>
+        <%= f.label :lining, "Full:" %>
+        <%= f.radio_button :lining, :full %><br>
+        <%= f.label :lining, "Half:" %>
+        <%= f.radio_button :lining, :half %><br>
+    </div>
 
-    <h3>Lining</h3>
-    <%= f.label :lining, "Full:" %>
-    <%= f.radio_button :lining, :full %><br>
-    <%= f.label :lining, "Half:" %>
-    <%= f.radio_button :lining, :half %><br>
-    
-    <h3>Suit Notes</h3>
-    <%= f.label :suit_note, "Notes:" %> 
-    <%= f.text_area :suit_note %><br>    
+    <div id ="suit_notes" class="blockfield">
+        <h3>Suit Notes</h3>
+        <%= f.label :suit_note, "Notes:" %> 
+        <%= f.text_area :suit_note %><br>
+    </div>
+    <div id="jacket_material" class="materialpad">
+        <h>Jacket</h>&nbsp;&nbsp;&nbsp;
+        <%= f.label :jacket_material, "Material:" %> 
+        <%= f.text_field :jacket_material %> &nbsp;&nbsp;
+        <%= f.label :jacket_lining, "Lining:" %> 
+        <%= f.text_field :jacket_lining %>
+    </div>
+    <div id="jacket_undercollar" class="additionalpad">
+        <h>Under Collar</h>
+        <%= f.label :jacket_under_collar, "Standard" %>
+        <%= f.radio_button :jacket_under_collar, :standard %><br>
+        <%= f.label :jacket_under_collar, "Upgraded" %>
+        <%= f.radio_button :jacket_under_collar, :Upgraded %>
+        <%= f.label :jacket_felt_color, "Felt Color" %> 
+        <%= f.text_field :jacket_felt_color %>    
+        <%= f.label :jacket_logo_stitch_color, "Logo Stitch Color" %>
+        <%= f.text_field :jacket_logo_stitch_color %><br>
+    </div>
+    <div id ="jacket_singlebreasted" class="additionalpad">
+        <h4>Single Breasted</h4>
+        <%= f.label :jacket_single_breasted, "1 Button" %>
+        <%= f.radio_button :jacket_single_breasted, :one_button %><br>
+        <%= f.label :jacket_single_breasted, "2 Button" %>
+        <%= f.radio_button :jacket_single_breasted, :two_button %><br>
+        <%= f.label :jacket_single_breasted, "3 Button" %>
+        <%= f.radio_button :jacket_single_breasted, :three_button %><br>
+    </div>
+    <div id="jacket_doublebreasted" class="additionalpad">
+        <h4>Double Breasted</h4>
+        <%= f.label :jacket_double_breasted, "4 Button 1 to Close" %>
+        <%= f.radio_button :jacket_double_breasted, :four_button_one_to_close %><br>
+        <%= f.label :jacket_double_breasted, "4 Button 2 to Close" %>
+        <%= f.radio_button :jacket_double_breasted, :four_button_two_to_close %><br>
+        <%= f.label :jacket_double_breasted, "6 Button 1 to Close" %>
+        <%= f.radio_button :jacket_double_breasted, :six_button_one_to_close %><br>
+        <%= f.label :jacket_double_breasted, "6 Button 2 to Close" %>
+        <%= f.radio_button :jacket_double_breasted, :six_button_two_to_close %><br>
+        <%= f.label :jacket_double_breasted, "6 Button 3 to Close" %>
+        <%= f.radio_button :jacket_double_breasted, :six_button_three_to_close %><br>
+    </div>
+    <div id ="jacket_vent">
+        <h4>Vent</h4>
+        <%= f.label :jacket_vent, "Single Vent" %>
+        <%= f.radio_button :jacket_vent, :single_vent %><br>
+        <%= f.label :jacket_vent, "Double Vent" %>
+        <%= f.radio_button :jacket_vent, :double_vent %><br>
+    </div>
+    <div id="jacket_lapels">
+        <h4>Lapels</h4>
+        <%= f.label :jacket_lapels, "Notch" %>
+        <%= f.radio_button :jacket_lapels, :notch %><br>
+        <%= f.label :jacket_lapels, "Peak" %>
+        <%= f.radio_button :jacket_lapels, :peak %><br>
+        <%= f.label :jacket_lapels, "Rounded Notch" %>
+        <%= f.radio_button :jacket_lapels, :rounded_notch %><br>
+        <%= f.label :jacket_lapels, "Shawl" %>
+        <%= f.radio_button :jacket_lapels, :shawl %><br>
+    </div>
+    <div id ="jacket_buttons" class="additionalpad">
+        <h4>Buttons</h4>
+        <%= f.label :jacket_button_color, "Button Color:" %> 
+        <%= f.text_field :jacket_button_color %><br>    
+        <%= f.label :jacket_button_stitch, "Button Stitching Color:" %> 
+        <%= f.text_field :jacket_button_stitch %><br>
+        <%= f.label :jacket_buttonhole, "Buttonhole Color:" %> 
+        <%= f.text_field :jacket_buttonhole %><br>
+        <%= f.label :jacket_lapel_buttonhole, "Lapel Buttonhole Color:" %> 
+        <%= f.text_field :jacket_lapel_buttonhole %><br>
+    </div>
 
-    <%= f.label :jacket_material, "Jacket Material:" %> 
-    <%= f.text_field :jacket_material %><br>    
-    <%= f.label :jacket_lining, "Jacket Lining:" %> 
-    <%= f.text_field :jacket_lining %><br>
+    <div id ="jacket_pockets" class="additionalpad">
+        <h4>Pockets</h4>
+        <%= f.label :jacket_pockets_straight, "Straight" %> 
+        <%= f.check_box :jacket_pockets_straight %><br>    
+        <%= f.label :jacket_pockets_slanted, "Slanted" %> 
+        <%= f.check_box :jacket_pockets_slanted %><br>
+        <%= f.label :jacket_pockets_patched, "Patched" %> 
+        <%= f.check_box :jacket_pockets_patched %><br>
+        <%= f.label :jacket_pockets_flaps, "Flaps" %> 
+        <%= f.check_box :jacket_pockets_flaps %><br>
+        <%= f.label :jacket_pockets_normal, "Normal Chest" %> 
+        <%= f.check_box :jacket_pockets_normal %><br>
+        <%= f.label :jacket_pockets_patch, "Patch Chest" %> 
+        <%= f.check_box :jacket_pockets_patch %><br>
+    </div>
 
-    <h3>Under Collar</h3>
-    <%= f.label :jacket_under_collar, "Standard" %>
-    <%= f.radio_button :jacket_under_collar, :standard %><br>
-    <%= f.label :jacket_under_collar, "Upgraded" %>
-    <%= f.radio_button :jacket_under_collar, :Upgraded %>
-    <%= f.label :jacket_felt_color, "Felt Color" %> 
-    <%= f.text_field :jacket_felt_color %>    
-    <%= f.label :jacket_logo_stitch_color, "Logo Stitch Color" %>
-    <%= f.text_field :jacket_logo_stitch_color %><br>
+    <div id ="jacket_detailing">
+        <h4>Detailing</h4>
+        <%= f.label :jacket_detailing_hand, "Hand Stitching" %> 
+        <%= f.check_box :jacket_detailing_hand %><br>    
+        <%= f.label :jacket_detailing_pick, "Pick Stitching" %> 
+        <%= f.check_box :jacket_detailing_pick %><br>
+        <%= f.label :jacket_detailing_dot, "Dot Stitching" %> 
+        <%= f.check_box :jacket_detailing_dot %><br>
+        <%= f.label :jacket_detailing_piping, "Piping" %> 
+        <%= f.check_box :jacket_detailing_piping %><br>
+        <%= f.label :jacket_detailing_welting, "Welting" %> 
+        <%= f.check_box :jacket_detailing_welting %>
+        <%= f.label :jacket_detailing_color, "Color:" %> 
+        <%= f.text_field :jacket_detailing_color %><br>
+        <%= f.label :jacket_detailing_elbow, "Elbow Patches" %> 
+        <%= f.check_box :jacket_detailing_elbow %>
+        <%= f.label :jacket_detailing_elbow_note, "Note:" %> 
+        <%= f.text_field :jacket_detailing_elbow_note %><br>
+    </div>
+    <div id="jacket_note">
+        <h4>Notes:</h4>
+        <%= f.text_area :jacket_note %><br>    
+    </div>
 
-    <h3>Single Breasted</h3>
-    <%= f.label :jacket_single_breasted, "1 Button" %>
-    <%= f.radio_button :jacket_single_breasted, :one_button %><br>
-    <%= f.label :jacket_single_breasted, "2 Button" %>
-    <%= f.radio_button :jacket_single_breasted, :two_button %><br>
-    <%= f.label :jacket_single_breasted, "3 Button" %>
-    <%= f.radio_button :jacket_single_breasted, :three_button %><br>
+    <div id ="vest_material" class ="materialpad">
+        <%= f.label :vest_material, "Vest Material:" %> 
+        <%= f.text_field :vest_material %><br>   
+    </div> 
 
-    <h3>Double Breasted</h3>
-    <%= f.label :jacket_double_breasted, "4 Button 1 to Close" %>
-    <%= f.radio_button :jacket_double_breasted, :four_button_one_to_close %><br>
-    <%= f.label :jacket_double_breasted, "4 Button 2 to Close" %>
-    <%= f.radio_button :jacket_double_breasted, :four_button_two_to_close %><br>
-    <%= f.label :jacket_double_breasted, "6 Button 1 to Close" %>
-    <%= f.radio_button :jacket_double_breasted, :six_button_one_to_close %><br>
-    <%= f.label :jacket_double_breasted, "6 Button 2 to Close" %>
-    <%= f.radio_button :jacket_double_breasted, :six_button_two_to_close %><br>
-    <%= f.label :jacket_double_breasted, "6 Button 3 to Close" %>
-    <%= f.radio_button :jacket_double_breasted, :six_button_three_to_close %><br>
+    <div id="vest_singlebreasted">
+        <h4>Single Breasted</h4>
+        <%= f.label :vest_single_breasted, "5 Button" %>
+        <%= f.radio_button :vest_single_breasted, :five_button %><br>
+        <%= f.label :vest_single_breasted, "6 Button" %>
+        <%= f.radio_button :vest_single_breasted, :six_button %><br>
+    </div>
+    <div id="vest_doublebreasted">
+        <h4>Double Breasted</h4>
+        <%= f.label :vest_double_breasted, "6 Button V" %>
+        <%= f.radio_button :vest_double_breasted, :six_button_v %><br>
+        <%= f.label :vest_double_breasted, "6 Button Straight" %>
+        <%= f.radio_button :vest_double_breasted, :six_button_straight %><br>
+    </div>
+    <div id="vest_back">
+        <h4>Back</h4>
+        <%= f.label :vest_back, "Material" %>
+        <%= f.radio_button :vest_back, :material %><br>
+        <%= f.label :vest_back, "Satin" %>
+        <%= f.radio_button :vest_back, :satin %><br>
+    </div>
+    <div id="vest_lapels">
+        <h4>Lapels</h4>
+        <%= f.label :vest_lapel, "Notch" %>
+        <%= f.radio_button :vest_lapel, :notch %><br>
+        <%= f.label :vest_lapel, "Peak" %>
+        <%= f.radio_button :vest_lapel, :peak %><br>
+        <%= f.label :vest_lapel, "Shawl" %>
+        <%= f.radio_button :vest_lapel, :shawl %><br>
+        <%= f.label :vest_lapel, "None" %>
+        <%= f.radio_button :vest_lapel, :none %><br>
+    </div>
+    <div id="vest_pockets">
+        <h4>Pockets</h4>
+        <%= f.label :vest_pockets_straight, "Straight" %> 
+        <%= f.check_box :vest_pockets_straight %><br>    
+        <%= f.label :vest_pockets_slanted, "Slanted" %> 
+        <%= f.check_box :vest_pockets_slanted %><br>
+        <%= f.label :vest_pockets_ticket, "Ticket" %> 
+        <%= f.check_box :vest_pockets_ticket %><br>
+        <%= f.label :vest_pockets_flaps, "Flaps" %> 
+        <%= f.check_box :vest_pockets_flaps %><br>
+        <%= f.label :vest_pockets_chest, "Chest" %> 
+        <%= f.check_box :vest_pockets_chest %><br>
+    </div>
+    <div id="vest_detailing">
+        <h4>Detailing</h4>
+        <%= f.label :vest_detailing_hand, "Hand Stitching" %> 
+        <%= f.check_box :vest_detailing_hand %><br>    
+        <%= f.label :vest_detailing_pick, "Pick Stitching" %> 
+        <%= f.check_box :vest_detailing_pick %><br>
+        <%= f.label :vest_detailing_dot, "Dot Stitching" %> 
+        <%= f.check_box :vest_detailing_dot %><br>
+        <%= f.label :vest_detailing_piping, "Piping" %> 
+        <%= f.check_box :vest_detailing_piping %><br>
+        <%= f.label :vest_detailing_welting, "Welting" %> 
+        <%= f.check_box :vest_detailing_welting %>
+        <%= f.label :vest_detailing_color, "Color:" %> 
+        <%= f.text_field :jacket_detailing_color %><br>
+    </div>
+    <div id="vest_buttons">
+        <h4>Buttons</h4>
+        <%= f.label :vest_button_color, "Button Color:" %> 
+        <%= f.text_field :vest_button_color %><br>    
+        <%= f.label :vest_button_stitch, "Button Stitching Color:" %> 
+        <%= f.text_field :vest_button_stitch %><br>
+        <%= f.label :vest_buttonhole, "Button Hole Color:" %> 
+        <%= f.text_field :vest_buttonhole %><br>
+    </div>
+    <div id ="vest_note">
+        <h4>Notes:</h4>
+        <%= f.text_area :vest_note %><br> 
+    </div>
+    <div id="trouser_material" class="materialpad">
+        <%= f.label :trouser_material, "Trousers  Material:" %> 
+        <%= f.text_field :trouser_material %><br>   
+    </div>        
+    <div id="trousers_frontpockets">
+        <h4>Front Pockets</h4>
+        <%= f.label :trouser_front_pocket, "Straight" %>
+        <%= f.radio_button :trouser_front_pocket, :straight %><br>
+        <%= f.label :trouser_front_pocket, "Slanted" %>
+        <%= f.radio_button :trouser_front_pocket, :slanted %><br>
+    </div>
 
-    <h3>Vent</h3>
-    <%= f.label :jacket_vent, "Single Vent" %>
-    <%= f.radio_button :jacket_vent, :single_vent %><br>
-    <%= f.label :jacket_vent, "Double Vent" %>
-    <%= f.radio_button :jacket_vent, :double_vent %><br>
+    <div id="trousers_pleats">
+        <h4>Pleats</h4>
+        <%= f.label :trouser_pleat, "None" %>
+        <%= f.radio_button :trouser_pleat, :none %><br>
+        <%= f.label :trouser_pleat, "1 Pleat" %>
+        <%= f.radio_button :trouser_pleat, :one_pleat %><br>
+        <%= f.label :trouser_pleat, "2 Pleats" %>
+        <%= f.radio_button :trouser_pleat, :two_pleats %><br>
+        <%= f.label :trouser_pleat, "3 Pleats" %>
+        <%= f.radio_button :trouser_pleat, :three_pleats %><br>
+    </div>
+    <div id="trousers_rearpockets">
+        <h4>Rear Pockets</h4>
+        <%= f.label :trouser_rear_left, "Left" %> 
+        <%= f.check_box :trouser_rear_left %><br>    
+        <%= f.label :trouser_rear_right, "Right" %> 
+        <%= f.check_box :trouser_rear_right %><br>
+        <%= f.label :trouser_rear_flaps, "Flaps" %> 
+        <%= f.check_box :trouser_rear_flaps %><br>
+        <%= f.label :trouser_rear_button, "Button" %> 
+        <%= f.check_box :trouser_rear_button %><br>
+        <%= f.label :trouser_rear_none, "None" %> 
+        <%= f.check_box :trouser_rear_none  %><br>
+    </div>
 
-    <h3>Lapels</h3>
-    <%= f.label :jacket_lapels, "Notch" %>
-    <%= f.radio_button :jacket_lapels, :notch %><br>
-    <%= f.label :jacket_lapels, "Peak" %>
-    <%= f.radio_button :jacket_lapels, :peak %><br>
-    <%= f.label :jacket_lapels, "Rounded Notch" %>
-    <%= f.radio_button :jacket_lapels, :rounded_notch %><br>
-    <%= f.label :jacket_lapels, "Shawl" %>
-    <%= f.radio_button :jacket_lapels, :shawl %><br>
+    <div id="trousers_fasteners">
+        <h4>Fastener</h4>
+        <%= f.label :trouser_fast_button, "Buttons" %> 
+        <%= f.check_box :trouser_fast_button %><br>    
+        <%= f.label :trouser_fast_clips, "Clips" %> 
+        <%= f.check_box :trouser_fast_clips %><br>
+        <%= f.label :trouser_fast_belt, "Belt Loops" %> 
+        <%= f.check_box :trouser_fast_belt %><br>
+        <%= f.label :trouser_fast_side, "Side Metal Fasteners" %> 
+        <%= f.check_box :trouser_fast_side %><br>
+    </div>
 
-    <h3>Buttons</h3>
-    <%= f.label :jacket_button_color, "Button Color:" %> 
-    <%= f.text_field :jacket_button_color %><br>    
-    <%= f.label :jacket_button_stitch, "Button Stitching Color:" %> 
-    <%= f.text_field :jacket_button_stitch %><br>
-    <%= f.label :jacket_buttonhole, "Buttonhole Color:" %> 
-    <%= f.text_field :jacket_buttonhole %><br>
-    <%= f.label :jacket_lapel_buttonhole, "Lapel Buttonhole Color:" %> 
-    <%= f.text_field :jacket_lapel_buttonhole %><br>
-
-    <h3>Pockets</h3>
-    <%= f.label :jacket_pockets_straight, "Straight" %> 
-    <%= f.check_box :jacket_pockets_straight %><br>    
-    <%= f.label :jacket_pockets_slanted, "Slanted" %> 
-    <%= f.check_box :jacket_pockets_slanted %><br>
-    <%= f.label :jacket_pockets_patched, "Patched" %> 
-    <%= f.check_box :jacket_pockets_patched %><br>
-    <%= f.label :jacket_pockets_flaps, "Flaps" %> 
-    <%= f.check_box :jacket_pockets_flaps %><br>
-    <%= f.label :jacket_pockets_normal, "Normal Chest" %> 
-    <%= f.check_box :jacket_pockets_normal %><br>
-    <%= f.label :jacket_pockets_patch, "Patch Chest" %> 
-    <%= f.check_box :jacket_pockets_patch %><br>
-
-    <h3>Detailing</h3>
-    <%= f.label :jacket_detailing_hand, "Hand Stitching" %> 
-    <%= f.check_box :jacket_detailing_hand %><br>    
-    <%= f.label :jacket_detailing_pick, "Pick Stitching" %> 
-    <%= f.check_box :jacket_detailing_pick %><br>
-    <%= f.label :jacket_detailing_dot, "Dot Stitching" %> 
-    <%= f.check_box :jacket_detailing_dot %><br>
-    <%= f.label :jacket_detailing_piping, "Piping" %> 
-    <%= f.check_box :jacket_detailing_piping %><br>
-    <%= f.label :jacket_detailing_welting, "Welting" %> 
-    <%= f.check_box :jacket_detailing_welting %>
-    <%= f.label :jacket_detailing_color, "Color:" %> 
-    <%= f.text_field :jacket_detailing_color %><br>
-    <%= f.label :jacket_detailing_elbow, "Elbow Patches" %> 
-    <%= f.check_box :jacket_detailing_elbow %>
-    <%= f.label :jacket_detailing_elbow_note, "Note:" %> 
-    <%= f.text_field :jacket_detailing_elbow_note %><br>
-
-    <h3>Notes</h3>
-    <%= f.label :jacket_note, "Notes:" %> 
-    <%= f.text_area :jacket_note %><br>    
-
-    <%= f.label :vest_material, "Vest Material:" %> 
-    <%= f.text_field :vest_material %><br>    
-
-    <h3>Single Breasted</h3>
-    <%= f.label :vest_single_breasted, "5 Button" %>
-    <%= f.radio_button :vest_single_breasted, :five_button %><br>
-    <%= f.label :vest_single_breasted, "6 Button" %>
-    <%= f.radio_button :vest_single_breasted, :six_button %><br>
-
-    <h3>Double Breasted</h3>
-    <%= f.label :vest_double_breasted, "6 Button V" %>
-    <%= f.radio_button :vest_double_breasted, :six_button_v %><br>
-    <%= f.label :vest_double_breasted, "6 Button Straight" %>
-    <%= f.radio_button :vest_double_breasted, :six_button_straight %><br>
-
-    <h3>Back</h3>
-    <%= f.label :vest_back, "Material" %>
-    <%= f.radio_button :vest_back, :material %><br>
-    <%= f.label :vest_back, "Satin" %>
-    <%= f.radio_button :vest_back, :satin %><br>
-
-    <h3>Lapels</h3>
-    <%= f.label :vest_lapel, "Notch" %>
-    <%= f.radio_button :vest_lapel, :notch %><br>
-    <%= f.label :vest_lapel, "Peak" %>
-    <%= f.radio_button :vest_lapel, :peak %><br>
-    <%= f.label :vest_lapel, "Shawl" %>
-    <%= f.radio_button :vest_lapel, :shawl %><br>
-    <%= f.label :vest_lapel, "None" %>
-    <%= f.radio_button :vest_lapel, :none %><br>
-
-    <h3>Pockets</h3>
-    <%= f.label :vest_pockets_straight, "Straight" %> 
-    <%= f.check_box :vest_pockets_straight %><br>    
-    <%= f.label :vest_pockets_slanted, "Slanted" %> 
-    <%= f.check_box :vest_pockets_slanted %><br>
-    <%= f.label :vest_pockets_ticket, "Ticket" %> 
-    <%= f.check_box :vest_pockets_ticket %><br>
-    <%= f.label :vest_pockets_flaps, "Flaps" %> 
-    <%= f.check_box :vest_pockets_flaps %><br>
-    <%= f.label :vest_pockets_chest, "Chest" %> 
-    <%= f.check_box :vest_pockets_chest %><br>
-
-    <h3>Detailing</h3>
-    <%= f.label :vest_detailing_hand, "Hand Stitching" %> 
-    <%= f.check_box :vest_detailing_hand %><br>    
-    <%= f.label :vest_detailing_pick, "Pick Stitching" %> 
-    <%= f.check_box :vest_detailing_pick %><br>
-    <%= f.label :vest_detailing_dot, "Dot Stitching" %> 
-    <%= f.check_box :vest_detailing_dot %><br>
-    <%= f.label :vest_detailing_piping, "Piping" %> 
-    <%= f.check_box :vest_detailing_piping %><br>
-    <%= f.label :vest_detailing_welting, "Welting" %> 
-    <%= f.check_box :vest_detailing_welting %>
-    <%= f.label :vest_detailing_color, "Color:" %> 
-    <%= f.text_field :jacket_detailing_color %><br>
-
-    <h3>Buttons</h3>
-    <%= f.label :vest_button_color, "Button Color:" %> 
-    <%= f.text_field :vest_button_color %><br>    
-    <%= f.label :vest_button_stitch, "Button Stitching Color:" %> 
-    <%= f.text_field :vest_button_stitch %><br>
-    <%= f.label :vest_buttonhole, "Button Hole Color:" %> 
-    <%= f.text_field :vest_buttonhole %><br>
-
-    <h3>Notes</h3>
-    <%= f.label :vest_note, "Notes:" %> 
-    <%= f.text_area :vest_note %><br> 
-
-    <%= f.label :trouser_material, "Trouser Material:" %> 
-    <%= f.text_field :trouser_material %><br>           
-
-    <h3>Front Pockets</h3>
-    <%= f.label :trouser_front_pocket, "Straight" %>
-    <%= f.radio_button :trouser_front_pocket, :straight %><br>
-    <%= f.label :trouser_front_pocket, "Slanted" %>
-    <%= f.radio_button :trouser_front_pocket, :slanted %><br>
-
-    <h3>Pleats</h3>
-    <%= f.label :trouser_pleat, "None" %>
-    <%= f.radio_button :trouser_pleat, :none %><br>
-    <%= f.label :trouser_pleat, "1 Pleat" %>
-    <%= f.radio_button :trouser_pleat, :one_pleat %><br>
-    <%= f.label :trouser_pleat, "2 Pleats" %>
-    <%= f.radio_button :trouser_pleat, :two_pleats %><br>
-    <%= f.label :trouser_pleat, "3 Pleats" %>
-    <%= f.radio_button :trouser_pleat, :three_pleats %><br>
-
-    <h3>Rear Pockets</h3>
-    <%= f.label :trouser_rear_left, "Left" %> 
-    <%= f.check_box :trouser_rear_left %><br>    
-    <%= f.label :trouser_rear_right, "Right" %> 
-    <%= f.check_box :trouser_rear_right %><br>
-    <%= f.label :trouser_rear_flaps, "Flaps" %> 
-    <%= f.check_box :trouser_rear_flaps %><br>
-    <%= f.label :trouser_rear_button, "Button" %> 
-    <%= f.check_box :trouser_rear_button %><br>
-    <%= f.label :trouser_rear_none, "None" %> 
-    <%= f.check_box :trouser_rear_none  %><br>
-
-    <h3>Fastener</h3>
-    <%= f.label :trouser_fast_button, "Buttons" %> 
-    <%= f.check_box :trouser_fast_button %><br>    
-    <%= f.label :trouser_fast_clips, "Clips" %> 
-    <%= f.check_box :trouser_fast_clips %><br>
-    <%= f.label :trouser_fast_belt, "Belt Loops" %> 
-    <%= f.check_box :trouser_fast_belt %><br>
-    <%= f.label :trouser_fast_side, "Side Metal Fasteners" %> 
-    <%= f.check_box :trouser_fast_side %><br>
-
-    <h3>Cuff</h3>
-    <%= f.label :trouser_cuff_none, "None" %>
-    <%= f.check_box :trouser_cuff_none %><br>
-    <%= f.label :trouser_cuff_other, "Other" %>
-    <%= f.check_box :trouser_cuff_other %>    
-    <%= f.text_field :trouser_cuff_other_note %><br> 
-
-    <h3>Notes</h3>
-    <%= f.label :trouser_note, "Notes:" %> 
-    <%= f.text_area :trouser_note %><br> 
-
-    <h3>Photo Attachments</h3>
-    <%= f.label :photo_front %>
-    <%= f.file_field :photo_front %> <br>
-    <%= f.label :photo_side %>
-    <%= f.file_field :photo_side %> <br>
-    <%= f.label :photo_back %>
-    <%= f.file_field :photo_back %> <br>
+    <div id="trousers_cuff">
+        <h4>Cuff</h4>
+        <%= f.label :trouser_cuff_none, "None" %>
+        <%= f.check_box :trouser_cuff_none %><br>
+        <%= f.label :trouser_cuff_other, "Other" %>
+        <%= f.check_box :trouser_cuff_other %>    
+        <%= f.text_field :trouser_cuff_other_note %><br> 
+    </div>
+    <div id="trousers_note">
+        <h4>Notes</h4>
+        <%= f.text_area :trouser_note %><br> 
+    </div>
+    <div id="suit_attach">
+        <h3>Photographs:</h3>
+        <%= f.label :photo_front, "Front" %>
+        <%= f.file_field :photo_front %> <br>
+        <%= f.label :photo_side, "Side" %>
+        <%= f.file_field :photo_side %> <br>
+        <%= f.label :photo_back, "Back" %>
+        <%= f.file_field :photo_back %> <br>
+    </div>
 
     <%= f.submit %>
 

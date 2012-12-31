@@ -12,6 +12,7 @@ Jtoor::Application.routes.draw do
   match 'suits/:id/upload' => 'suits#upload', :as => 'suit_upload'
 
   match 'authorize' => 'db#authorize', :as => 'authorize'
+  match 'logout' => 'db#deauthorize', :as => 'logout'
 
   resources :forms
 

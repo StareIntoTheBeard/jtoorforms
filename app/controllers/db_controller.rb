@@ -16,4 +16,11 @@ class DbController < ApplicationController
         redirect_to :root
     end
   end
+
+  def deauthorize
+    if session[:dropbox_session]
+        reset_session
+    end
+    redirect_to :root
+end
 end

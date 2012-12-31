@@ -12,175 +12,208 @@
   <% end %>
 
   <div class="actions">
-    <h3>Customer Information</h3>
-    <%= f.label :customer_name %>
-    <%= f.text_field :customer_name %> <br>
-    <%= f.label :phone_number %> 
-    <%= f.text_field :phone_number %><br>
-    <%= f.label :address %> 
-    <%= f.text_field :address %><br>
-    <%= f.label :city %> 
-    <%= f.text_field :city %><br>
-    <%= f.label :state %> 
-    <%= f.text_field :state %><br>
-    <%= f.label :zip %> 
-    <%= f.text_field :zip %><br>
-    <%= f.label :email %> 
-    <%= f.text_field :email %><br>
-    <h3>Measurements</h3>
-    <%= f.label :measure_neck, "Neck:" %> 
-    <%= f.text_field :measure_neck %><br>
-    <%= f.label :measure_overarm, "Overarm:" %> 
-    <%= f.text_field :measure_overarm %><br>
-    <%= f.label :measure_chest, "Chest:" %> 
-    <%= f.text_field :measure_chest %><br>
-    <%= f.label :measure_stomach, "Stomach:" %> 
-    <%= f.text_field :measure_stomach %><br>
-    <%= f.label :measure_shoulder, "Shoulder to Shoulder:" %> 
-    <%= f.text_field :measure_shoulder %><br>
-    <%= f.label :measure_wrist, "Wrist/Cuff:" %> 
-    <%= f.text_field :measure_wrist %><br>
-    <%= f.label :measure_bicep, "Bicep:" %> 
-    <%= f.text_field :measure_bicep %><br>
-    <%= f.label :measure_length, "Shirt Length:" %> 
-    <%= f.text_field :measure_length %><br>
-    <%= f.label :measure_sleeve, "Shirt Sleeve:" %> 
-    <%= f.text_field :measure_sleeve %><br>
-    <%= f.label :measure_hips, "Hips:" %> 
-    <%= f.text_field :measure_hips %><br>
+    <div id="logo" class="blockfield">
+        <%= image_tag 'jtoor.png' %>
+    </div>
+    <div id ="customerinfo" class="blockfield">
+        <h3>Customer Information</h3>
+        <%= f.label :customer_name %>
+        <%= f.text_field :customer_name %> 
+        <%= f.label :phone_number %> 
+        <%= f.text_field :phone_number %><br>
+        <%= f.label :address %> 
+        <%= f.text_field :address %>
+        <%= f.label :city %> 
+        <%= f.text_field :city %><br>
+        <%= f.label :state %> 
+        <%= f.text_field :state %>
+        <%= f.label :zip %> 
+        <%= f.text_field :zip %>
+        <%= f.label :email %> 
+        <%= f.text_field :email %>
+    </div>
+    <br>
+    <div id ="shirtmeasurements" class="blockfield">
+        <h3>Shirt Measurements</h3>
+        <%= f.label :measure_neck, "Neck:" %> 
+        <%= f.text_field :measure_neck %><br>
+        <%= f.label :measure_overarm, "Overarm:" %> 
+        <%= f.text_field :measure_overarm %><br>
+        <%= f.label :measure_chest, "Chest:" %> 
+        <%= f.text_field :measure_chest %><br>
+        <%= f.label :measure_stomach, "Stomach:" %> 
+        <%= f.text_field :measure_stomach %><br>
+        <%= f.label :measure_shoulder, "Shoulder to Shoulder:" %> 
+        <%= f.text_field :measure_shoulder %><br>
+        <%= f.label :measure_wrist, "Wrist/Cuff:" %> 
+        <%= f.text_field :measure_wrist %><br>
+        <%= f.label :measure_bicep, "Bicep:" %> 
+        <%= f.text_field :measure_bicep %><br>
+        <%= f.label :measure_length, "Shirt Length:" %> 
+        <%= f.text_field :measure_length %><br>
+        <%= f.label :measure_sleeve, "Shirt Sleeve:" %> 
+        <%= f.text_field :measure_sleeve %><br>
+        <%= f.label :measure_hips, "Hips:" %> 
+        <%= f.text_field :measure_hips %><br>
+    </div> 
+    <div id="shirt_shouldertype" class="blockfield">
+        <h3>Shoulder Type</h3>
+        <%= f.label :shoulder_type, "Sloping Shoulders, Long Neck" %>
+        <%= f.radio_button :shoulder_type, :sloping_shoulders %><br>
+        <%= f.label :shoulder_type, "Square Shoulders, Short Neck" %>
+        <%= f.radio_button :shoulder_type, :square_shoulders %><br>
+        <%= f.label :shoulder_type, "Normal Shoulders, Normal Neck" %>
+        <%= f.radio_button :shoulder_type, :normal_shoulders %><br>
+    </div>
+    <div id="shirt_balancefigure" class="blockfield">
+        <h3>Balance Figure</h3>
+        <%= f.label :balance_figure, "Erect/Full Chest" %>
+        <%= f.radio_button :balance_figure, :full_chest %><br>
+        <%= f.label :balance_figure, "Forward Neck" %>
+        <%= f.radio_button :balance_figure, :forward_neck %><br>
+        <%= f.label :balance_figure, "Normal Posture" %>
+        <%= f.radio_button :balance_figure, :normal_posture %><br>
+        <%= f.label :balance_figure, "Round Back" %>
+        <%= f.radio_button :balance_figure, :round_back %><br>
+        <%= f.label :balance_figure, "Forward Stomach/Stout" %>
+        <%= f.radio_button :balance_figure, :forward_stomach %><br>
+    </div>
+    <div id="shirt_fitting" class ="blockfield">
+        <h3>Fitting</h3>
+        <%= f.label :fitting, "Snug" %>
+        <%= f.radio_button :fitting, :snug %><br>
+        <%= f.label :fitting, "Comfortable" %>
+        <%= f.radio_button :fitting, :comfortable %><br>
+        <%= f.label :fitting, "Loosely Comfortable" %>
+        <%= f.radio_button :fitting, :loosely_comfortable %><br>
+        <%= f.label :fitting, "Very Loose" %>
+        <%= f.radio_button :fitting, :very_loose %><br>
+        <%= f.label :fitting, "Very Baggy" %>
+        <%= f.radio_button :fitting, :very_baggy %><br>
+    </div>
+    <div id="shirt_notes" class="blockfield">
+        <h3>Notes</h3>
+        <%= f.text_area :notes %>
+    </div>
 
-    <h3>Shoulder Type</h3>
-    <%= f.label :shoulder_type, "Sloping Shoulders, Long Neck" %>
-    <%= f.radio_button :shoulder_type, :sloping_shoulders %><br>
-    <%= f.label :shoulder_type, "Square Shoulders, Short Neck" %>
-    <%= f.radio_button :shoulder_type, :square_shoulders %><br>
-    <%= f.label :shoulder_type, "Normal Shoulders, Normal Neck" %>
-    <%= f.radio_button :shoulder_type, :normal_shoulders %><br>
+    <div id="shirt_material">
+        <%= f.label :shirt_material %> 
+        <%= f.text_field :shirt_material %>
+    </div>
+    <div id="shirt_materialdetails" class="additionalpad">
+        <h4>Material Details</h4>
+        <%= f.label :material_collar, "Collar:" %>
+        <%= f.text_field :material_collar %> <br>
+        <%= f.label :material_inner_collar, "Inner Collar:" %> 
+        <%= f.text_field :material_inner_collar %><br>
+        <%= f.label :material_under_collar, "Under Collar:" %>
+        <%= f.text_field :material_under_collar %><br>
+        <%= f.label :material_buttonside_outer, "Button-side Outer:" %>
+        <%= f.text_field :material_buttonside_outer %> <br>
+        <%= f.label :material_buttonside_inner, "Button-side Inner:" %>
+        <%= f.text_field :material_buttonside_inner %> <br>
+        <%= f.label :material_buttonholeside_outer, "Buttonhole-side Outer:" %>
+        <%= f.text_field :material_buttonholeside_outer %> <br>
+        <%= f.label :material_buttonholeside_inner, "Buttonhole-side Inner:" %>
+        <%= f.text_field :material_buttonholeside_inner %> <br>
+        <%= f.label :material_cuffs, "Cuffs:" %>
+        <%= f.text_field :material_cuffs %> <br>
+        <%= f.label :material_inner_cuffs, "Inner Cuffs:" %> 
+        <%= f.text_field :material_inner_cuffs %><br>
+    </div>
+    <div id="shirt_cuffstyle" class="additionalpad">
+        <h4>Cuff Style</h4>
+        <%= f.label :cuff_style, "French Angled" %>
+        <%= f.radio_button :cuff_style, :french_angled %><br>
+        <%= f.label :cuff_style, "French Square" %>
+        <%= f.radio_button :cuff_style, :french_square %><br>
+        <%= f.label :cuff_style, "French Rounded" %>
+        <%= f.radio_button :cuff_style, :french_rounded %><br>
+        <%= f.label :cuff_style, "1 Btn Angled" %>
+        <%= f.radio_button :cuff_style, :one_btn_angled %><br>
+        <%= f.label :cuff_style, "1 Btn Rounded" %>
+        <%= f.radio_button :cuff_style, :one_btn_rounded %><br>
+        <%= f.label :cuff_style, "1 Btn Square" %>
+        <%= f.radio_button :cuff_style, :one_btn_square %><br>
+        <%= f.label :cuff_style, "2 Btn Angled" %>
+        <%= f.radio_button :cuff_style, :two_btn_angled %><br>
+        <%= f.label :cuff_style, "2 Btn Rounded" %>
+        <%= f.radio_button :cuff_style, :two_btn_rounded %><br>
+        <%= f.label :cuff_style, "2 Btn Square" %>
+        <%= f.radio_button :cuff_style, :two_btn_square %><br>
+    </div>
+    <div id="shirt_collarstyle" class="">
+        <h4>Collar Style</h4>
+        <%= f.label :collar_style, "Round" %>
+        <%= f.radio_button :collar_style, :round %><br>
+        <%= f.label :collar_style, "Italian 1 Btn" %>
+        <%= f.radio_button :collar_style, :italian_one_btn %><br>
+        <%= f.label :collar_style, "Italian 2 Btn" %>
+        <%= f.radio_button :collar_style, :italian_two_btn %><br>
+        <%= f.label :collar_style, "French 1 Btn" %>
+        <%= f.radio_button :collar_style, :french_one_btn %><br>
+        <%= f.label :collar_style, "French 2 Btn" %>
+        <%= f.radio_button :collar_style, :french_two_btn %><br>
+        <%= f.label :collar_style, "Btn Down" %>
+        <%= f.radio_button :collar_style, :btn_down %><br>
+        <%= f.label :collar_style, "Hidden Btn" %>
+        <%= f.radio_button :collar_style, :hidden_btn %><br>
+        <%= f.label :collar_style, "Butterfly" %>
+        <%= f.radio_button :collar_style, :butterfly %><br>
+        <%= f.label :collar_style, "Cut Away 1 Btn" %>
+        <%= f.radio_button :collar_style, :cut_away_one_btn %><br>
+        <%= f.label :collar_style, "Cut Away 2 Btn" %>
+        <%= f.radio_button :collar_style, :cut_away_two_btn %><br>
+    </div>
 
-    <h3>Balance Figure</h3>
-    <%= f.label :balance_figure, "Erect/Full Chest" %>
-    <%= f.radio_button :balance_figure, :full_chest %><br>
-    <%= f.label :balance_figure, "Forward Neck" %>
-    <%= f.radio_button :balance_figure, :forward_neck %><br>
-    <%= f.label :balance_figure, "Normal Posture" %>
-    <%= f.radio_button :balance_figure, :normal_posture %><br>
-    <%= f.label :balance_figure, "Round Back" %>
-    <%= f.radio_button :balance_figure, :round_back %><br>
-    <%= f.label :balance_figure, "Forward Stomach/Stout" %>
-    <%= f.radio_button :balance_figure, :forward_stomach %><br>
+    <div id="shirt_buttons">
+        <h4>Buttons</h4>
+        <%= f.label :button_color, "Button Color:" %>
+        <%= f.text_field :button_color %><br>
+        <%= f.label :button_stitching_color, "Button Stitching Color:" %> 
+        <%= f.text_field :button_stitching_color %><br>
+        <%= f.label :button_hole_color, "Button Hole Color:" %>
+        <%= f.text_field :button_hole_color%> <br>
+    </div>
 
-    <h3>Fitting</h3>
-    <%= f.label :fitting, "Snug" %>
-    <%= f.radio_button :fitting, :snug %><br>
-    <%= f.label :fitting, "Comfortable" %>
-    <%= f.radio_button :fitting, :comfortable %><br>
-    <%= f.label :fitting, "Loosely Comfortable" %>
-    <%= f.radio_button :fitting, :loosely_comfortable %><br>
-    <%= f.label :fitting, "Very Loose" %>
-    <%= f.radio_button :fitting, :very_loose %><br>
-    <%= f.label :fitting, "Very Baggy" %>
-    <%= f.radio_button :fitting, :very_baggy %><br>
+    <div id="shirt_pockets" class ="additionalpad">
+        <h4>Pockets</h4>
+        <%= f.label :pockets, "Chest Pocket" %>
+        <%= f.radio_button :pockets, :chest_pocket %><br>
+        <%= f.label :pockets, "None" %>
+        <%= f.radio_button :pockets, :none %><br>
+    </div>
 
-    <%= f.label :shirt_material %> 
-    <%= f.text_field :shirt_material %>
+    <div id ="shirt_detailing" class="additionalpad">
+        <h4>Detailing</h4>
+        <%= f.label :detailing, "Hand Detailing" %>
+        <%= f.radio_button :detailing, :hand_detailing %><br>
+        <%= f.label :detailing, "Pick Stitching" %>
+        <%= f.radio_button :detailing, :pick_stitching %><br>
+        <%= f.label :detailing, "Dot Stitching" %>
+        <%= f.radio_button :detailing, :dot_stitching %><br>
+        <%= f.label :detailing, "Piping" %>
+        <%= f.radio_button :detailing, :piping %><br>
+        <%= f.label :detailing, "Welting" %>
+        <%= f.radio_button :detailing, :welting %><br>
+        <%= f.label :detailing_color, "Color"%>
+        <%= f.text_field :detailing_color %> <br>
+    </div>
 
-    <h3>Cuff Style</h3>
-    <%= f.label :cuff_style, "French Angled" %>
-    <%= f.radio_button :cuff_style, :french_angled %><br>
-    <%= f.label :cuff_style, "French Square" %>
-    <%= f.radio_button :cuff_style, :french_square %><br>
-    <%= f.label :cuff_style, "French Rounded" %>
-    <%= f.radio_button :cuff_style, :french_rounded %><br>
-    <%= f.label :cuff_style, "1 Btn Angled" %>
-    <%= f.radio_button :cuff_style, :one_btn_angled %><br>
-    <%= f.label :cuff_style, "1 Btn Rounded" %>
-    <%= f.radio_button :cuff_style, :one_btn_rounded %><br>
-    <%= f.label :cuff_style, "1 Btn Square" %>
-    <%= f.radio_button :cuff_style, :one_btn_square %><br>
-    <%= f.label :cuff_style, "2 Btn Angled" %>
-    <%= f.radio_button :cuff_style, :two_btn_angled %><br>
-    <%= f.label :cuff_style, "2 Btn Rounded" %>
-    <%= f.radio_button :cuff_style, :two_btn_rounded %><br>
-    <%= f.label :cuff_style, "2 Btn Square" %>
-    <%= f.radio_button :cuff_style, :two_btn_square %><br>
-
-    <h3>Collar Style</h3>
-    <%= f.label :collar_style, "Round" %>
-    <%= f.radio_button :collar_style, :round %><br>
-    <%= f.label :collar_style, "Italian 1 Btn" %>
-    <%= f.radio_button :collar_style, :italian_one_btn %><br>
-    <%= f.label :collar_style, "Italian 2 Btn" %>
-    <%= f.radio_button :collar_style, :italian_two_btn %><br>
-    <%= f.label :collar_style, "French 1 Btn" %>
-    <%= f.radio_button :collar_style, :french_one_btn %><br>
-    <%= f.label :collar_style, "French 2 Btn" %>
-    <%= f.radio_button :collar_style, :french_two_btn %><br>
-    <%= f.label :collar_style, "Btn Down" %>
-    <%= f.radio_button :collar_style, :btn_down %><br>
-    <%= f.label :collar_style, "Hidden Btn" %>
-    <%= f.radio_button :collar_style, :hidden_btn %><br>
-    <%= f.label :collar_style, "Butterfly" %>
-    <%= f.radio_button :collar_style, :butterfly %><br>
-    <%= f.label :collar_style, "Cut Away 1 Btn" %>
-    <%= f.radio_button :collar_style, :cut_away_one_btn %><br>
-    <%= f.label :collar_style, "Cut Away 2 Btn" %>
-    <%= f.radio_button :collar_style, :cut_away_two_btn %><br>
-
-    <h2>Material Details</h2>
-    <%= f.label :material_collar, "Collar:" %>
-    <%= f.text_field :material_collar %> <br>
-    <%= f.label :material_inner_collar, "Inner Collar:" %> 
-    <%= f.text_field :material_inner_collar %><br>
-    <%= f.label :material_under_collar, "Under Collar:" %>
-    <%= f.text_field :material_under_collar %><br>
-    <%= f.label :material_buttonside_outer, "Button-side Outer:" %>
-    <%= f.text_field :material_buttonside_outer %> <br>
-    <%= f.label :material_buttonside_inner, "Button-side Inner:" %>
-    <%= f.text_field :material_buttonside_inner %> <br>
-    <%= f.label :material_cuffs, "Cuffs:" %>
-    <%= f.text_field :material_cuffs %> <br>
-    <%= f.label :material_inner_cuffs, "Inner Cuffs:" %> 
-    <%= f.text_field :material_inner_cuffs %><br>
-
-    <h3>Buttons</h3>
-    <%= f.label :button_color, "Button Color:" %>
-    <%= f.text_field :button_color %><br>
-    <%= f.label :button_stitching_color, "Button Stitching Color:" %> 
-    <%= f.text_field :button_stitching_color %><br>
-    <%= f.label :button_hole_color, "Button Hole Color:" %>
-    <%= f.text_field :button_hole_color%> <br>
-
-    <h3>Pockets</h3>
-    <%= f.label :pockets, "Chest Pocket" %>
-    <%= f.radio_button :pockets, :chest_pocket %><br>
-    <%= f.label :pockets, "None" %>
-    <%= f.radio_button :pockets, :none %><br>
-
-    <h3>Detailing</h3>
-    <%= f.label :detailing, "Hand Detailing" %>
-    <%= f.radio_button :detailing, :hand_detailing %><br>
-    <%= f.label :detailing, "Pick Stitching" %>
-    <%= f.radio_button :detailing, :pick_stitching %><br>
-    <%= f.label :detailing, "Dot Stitching" %>
-    <%= f.radio_button :detailing, :dot_stitching %><br>
-    <%= f.label :detailing, "Piping" %>
-    <%= f.radio_button :detailing, :piping %><br>
-    <%= f.label :detailing, "Welting" %>
-    <%= f.radio_button :detailing, :welting %><br>
-    <%= f.label :detailing_color, "Color"%>
-    <%= f.text_field :detailing_color %> <br>
-
-
-   <h3>Notes</h3>
-   <%= f.text_area :notes %><br>
-
-    <h3>Photo Attachments</h3>
-    <%= f.label :photo_front %>
-    <%= f.file_field :photo_front %> <br>
-    <%= f.label :photo_side %>
-    <%= f.file_field :photo_side %> <br>
-    <%= f.label :photo_back %>
-    <%= f.file_field :photo_back %> <br>
+    <div id ="shirt_morenotes">
+       <h4>Notes:</h4>
+       <%= f.text_area :more_notes %><br>
+   </div>
+   <div id="shirt_attach">
+        <h3>Photographs</h3>
+        <%= f.label :photo_front, "Front" %>
+        <%= f.file_field :photo_front %> <br>
+        <%= f.label :photo_side, "Side" %>
+        <%= f.file_field :photo_side %> <br>
+        <%= f.label :photo_back, "Back" %>
+        <%= f.file_field :photo_back %> <br>
+    </div>
     <%= f.submit %>
   </div>
+
 <% end %>

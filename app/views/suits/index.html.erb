@@ -9,9 +9,9 @@
 
 <% @suits.each do |suit| %>
   <tr>
-    <td><%= link_to 'Show', suit %></td>
+    <td><%= link_to 'View', suit %></td>
     <td><%= link_to 'Edit', edit_suit_path(suit) %></td>
-    <td><%= link_to 'Destroy', suit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', suit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

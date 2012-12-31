@@ -10,9 +10,9 @@
   <tr>
     <td><%= shirt.customer_name %></td>
     <td><%= shirt.created_at %> </td>
-    <td><%= link_to 'Show', shirt %></td>
+    <td><%= link_to 'View', shirt %></td>
     <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
-    <td><%= link_to 'Destroy', shirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', shirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

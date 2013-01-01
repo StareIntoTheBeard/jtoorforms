@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121231183015) do
+ActiveRecord::Schema.define(:version => 20130101174332) do
 
   create_table "forms", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -199,6 +199,7 @@ ActiveRecord::Schema.define(:version => 20121231183015) do
     t.datetime "photo_back_updated_at"
     t.string   "trouser_cuff_other_note"
     t.string   "jacket_front_length"
+    t.string   "jacket_pockets_ticket"
   end
 
 end

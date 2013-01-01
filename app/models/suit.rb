@@ -5,7 +5,7 @@ class Suit < ActiveRecord::Base
   	:jacket_vest_button, :jacket_vest_length, :jacket_vest_size, :jacket_elbow, :trouser_waist, :trouser_hips, :trouser_rise, :trouser_length,
   	:trouser_inseam, :trouser_knee_length, :trouser_thigh_width, :trouser_knee_width, :trouser_bottom_width, :shoulder_type, :balance_figure,
   	:fitting, :lining, :suit_note, :jacket_material, :jacket_lining, :jacket_under_collar, :jacket_felt_color, :jacket_logo_stitch_color,
-  	:jacket_single_breasted, :jacket_double_breasted, :jacket_vent, :jacket_lapels, :jacket_pockets_straight, :jacket_pockets_slanted,
+  	:jacket_single_breasted, :jacket_double_breasted, :jacket_vent, :jacket_lapels, :jacket_pockets_straight, :jacket_pockets_slanted, :jacket_pockets_ticket,
   	:jacket_pockets_patched, :jacket_pockets_flaps, :jacket_pockets_normal, :jacket_pockets_patch, :jacket_detailing_hand, :jacket_detailing_pick,
   	:jacket_detailing_dot, :jacket_detailing_piping, :jacket_detailing_welting, :jacket_detailing_color, :jacket_detailing_elbow,
   	:jacket_detailing_elbow_note, :jacket_button_color, :jacket_button_stitch, :jacket_buttonhole, :jacket_lapel_buttonhole, :jacket_note,

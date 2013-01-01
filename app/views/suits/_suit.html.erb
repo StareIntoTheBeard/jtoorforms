@@ -160,9 +160,10 @@
         <h4>Pockets</h4>
         
         <%= "Straight" if @suit.jacket_pockets_straight == '1' %><br>            
-        <%= "Slanted" if @suit.jacket_pockets_slanted == '1'%><br>   
+        <%= "Slanted" if @suit.jacket_pockets_slanted == '1'%><br>  
+        <%= "With Ticket Pocket" if @suit.jacket_pockets_ticket == '1'%><br>   
         <%= "Patched" if @suit.jacket_pockets_patched  == '1' %><br>      
-        <%="Flaps" if @suit.jacket_pockets_flaps == '1' %><br>
+        <%= "Flaps" if @suit.jacket_pockets_flaps == '1' %><br>
         <%= "Normal Chest" if @suit.jacket_pockets_normal == '1' %><br>
         <%= "Patch Chest" if @suit.jacket_pockets_patch == '1'%><br>
     </div>
@@ -222,7 +223,7 @@
         
         <%= "Slanted" if @suit.vest_pockets_slanted == '1' %><br>
          
-        <%= "Ticket" if @suit.vest_pockets_ticket == '1' %><br>
+        <%= "W/Ticket" if @suit.vest_pockets_ticket == '1' %><br>
         
         <%= "Flaps" if @suit.vest_pockets_flaps == '1' %><br>
         

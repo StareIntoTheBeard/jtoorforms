@@ -218,13 +218,14 @@
         <%= f.label :jacket_lapel_buttonhole, "Lapel Buttonhole Color:" %> 
         <%= f.text_field :jacket_lapel_buttonhole %><br>
     </div>
-
     <div id ="jacket_pockets" class="additionalpad">
         <h4>Pockets</h4>
         <%= f.label :jacket_pockets_straight, "Straight" %> 
         <%= f.check_box :jacket_pockets_straight %><br>    
         <%= f.label :jacket_pockets_slanted, "Slanted" %> 
         <%= f.check_box :jacket_pockets_slanted %><br>
+        <%= f.label :jacket_pockets_ticket, "With Ticket Pocket" %> 
+        <%= f.check_box :jacket_pockets_ticket %><br>
         <%= f.label :jacket_pockets_patched, "Patched" %> 
         <%= f.check_box :jacket_pockets_patched %><br>
         <%= f.label :jacket_pockets_flaps, "Flaps" %> 
@@ -302,7 +303,7 @@
         <%= f.check_box :vest_pockets_straight %><br>    
         <%= f.label :vest_pockets_slanted, "Slanted" %> 
         <%= f.check_box :vest_pockets_slanted %><br>
-        <%= f.label :vest_pockets_ticket, "Ticket" %> 
+        <%= f.label :vest_pockets_ticket, "W/Ticket" %> 
         <%= f.check_box :vest_pockets_ticket %><br>
         <%= f.label :vest_pockets_flaps, "Flaps" %> 
         <%= f.check_box :vest_pockets_flaps %><br>

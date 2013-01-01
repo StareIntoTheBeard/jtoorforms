@@ -158,36 +158,31 @@
 
     <div id ="jacket_pockets" class="additionalpad">
         <h4>Pockets</h4>
-        Straight
-        <%= @suit.jacket_pockets_straight %><br>    
-        Slanted 
-        <%= @suit.jacket_pockets_slanted %><br>
-        Patched
-        <%= @suit.jacket_pockets_patched %><br>
-        Flaps
-        <%= @suit.jacket_pockets_flaps %><br>
-        Normal Chest
-        <%= @suit.jacket_pockets_normal %><br>
-        Patch Chest
-        <%= @suit.jacket_pockets_patch %><br>
+        
+        <%= "Straight" if @suit.jacket_pockets_straight == '1' %><br>            
+        <%= "Slanted" if @suit.jacket_pockets_slanted == '1'%><br>   
+        <%= "Patched" if @suit.jacket_pockets_patched  == '1' %><br>      
+        <%="Flaps" if @suit.jacket_pockets_flaps == '1' %><br>
+        <%= "Normal Chest" if @suit.jacket_pockets_normal == '1' %><br>
+        <%= "Patch Chest" if @suit.jacket_pockets_patch == '1'%><br>
     </div>
 
     <div id ="jacket_detailing">
         <h4>Detailing</h4>
-        Hand Stitching 
-        <%= @suit.jacket_detailing_hand %><br>    
-        Pick Stitching
-        <%= @suit.jacket_detailing_pick %><br>
-        Dot Stitching
-        <%= @suit.jacket_detailing_dot %><br>
-        Piping
-        <%= @suit.jacket_detailing_piping %><br>
-        Welting 
-        <%= @suit.jacket_detailing_welting %>
-        Color:
-        <%= @suit.jacket_detailing_color %><br>
-        Elbow Patches 
-        <%= @suit.jacket_detailing_elbow %>
+        
+        <%= "Hand Stitching" if @suit.jacket_detailing_hand  == '1' %><br>    
+       
+        <%="Pick Stitching" if @suit.jacket_detailing_pick  == '1' %><br>
+       
+        <%= "Dot Stitching" if @suit.jacket_detailing_dot =='1' %><br>
+        
+        <%= "Piping" if @suit.jacket_detailing_piping == '1' %><br>
+         
+        <%= "Welting" if @suit.jacket_detailing_welting =='1' %>
+        
+        <%= "Color: " + @suit.jacket_detailing_color unless @suit.jacket_detailing_color == '' %><br>
+        
+        <%= "Elbow Patches" if @suit.jacket_detailing_elbow == '1' %>
         Note:
         <%= @suit.jacket_detailing_elbow_note %><br>
     </div>
@@ -222,31 +217,25 @@
     </div>
     <div id="vest_pockets">
         <h4>Pockets</h4>
-        Straight
-        <%= @suit.vest_pockets_straight %><br>    
-        Slanted
-        <%= @suit.vest_pockets_slanted %><br>
-        Ticket 
-        <%= @suit.vest_pockets_ticket %><br>
-        Flaps
-        <%= @suit.vest_pockets_flaps %><br>
-        Chest
-        <%= @suit.vest_pockets_chest %><br>
+        
+        <%= "Straight" if @suit.vest_pockets_straight == '1' %><br>    
+        
+        <%= "Slanted" if @suit.vest_pockets_slanted == '1' %><br>
+         
+        <%= "Ticket" if @suit.vest_pockets_ticket == '1' %><br>
+        
+        <%= "Flaps" if @suit.vest_pockets_flaps == '1' %><br>
+        
+        <%= "Chest" if @suit.vest_pockets_chest == '1' %><br>
     </div>
     <div id="vest_detailing">
-        <h4>Detailing</h4>
-        Hand Stitching
-        <%= @suit.vest_detailing_hand %><br>    
-        Pick Stitching
-        <%= @suit.vest_detailing_pick %><br>
-        Dot Stitching
-        <%= @suit.vest_detailing_dot %><br>
-        Piping
-        <%= @suit.vest_detailing_piping %><br>
-        Welting
-        <%= @suit.vest_detailing_welting %>
-        Color:
-        <%= @suit.jacket_detailing_color %><br>
+        <h4>Detailing</h4>    
+        <%= "Hand Stitching" if @suit.vest_detailing_hand  == '1'%><br>    
+        <%= "Pick Stitching" if @suit.vest_detailing_pick  == '1'%><br>
+        <%= "Dot Stitching" if @suit.vest_detailing_dot =='1' %><br>
+        <%= "Piping" if @suit.vest_detailing_piping  == '1'%><br>
+        <%= "Welting" if @suit.vest_detailing_welting =='1' %>
+        <%= "Color: " + @suit.vest_detailing_color unless @suit.vest_detailing_color == '' %><br>
     </div>
     <div id="vest_buttons">
         <h4>Buttons</h4>
@@ -277,36 +266,36 @@
     </div>
     <div id="trousers_rearpockets">
         <h4>Rear Pockets</h4>
-        Left
-        <%= @suit.trouser_rear_left %><br>    
-        Right 
-        <%= @suit.trouser_rear_right %><br>
-        Flaps
-        <%= @suit.trouser_rear_flaps %><br>
-        Button
-        <%= @suit.trouser_rear_button %><br>
-        None
-        <%= @suit.trouser_rear_none  %><br>
+        
+        <%= "Left" if @suit.trouser_rear_left == '1' %><br>    
+        
+        <%= "Right" if @suit.trouser_rear_right == '1'%><br>
+        
+        <%= "Flaps" if @suit.trouser_rear_flaps == '1' %><br>
+        
+        <%= "Button" if @suit.trouser_rear_button  == '1'%><br>
+        
+        <%= "None" if @suit.trouser_rear_none == '1'  %><br>
     </div>
 
     <div id="trousers_fasteners">
         <h4>Fastener</h4>
-        Buttons
-        <%= @suit.trouser_fast_button %><br>    
-        Clips
-        <%= @suit.trouser_fast_clips %><br>
-        Belt Loops 
-        <%= @suit.trouser_fast_belt %><br>
-        Side Metal Fasteners
-        <%= @suit.trouser_fast_side %><br>
+        
+        <%= "Buttons" if @suit.trouser_fast_button == '1' %><br>    
+        
+        <%= "Clips" if @suit.trouser_fast_clips == '1'%><br>
+        
+        <%= "Belt Loops" if @suit.trouser_fast_belt == '1' %><br>
+        
+        <%= "Side Metal Fasteners" if @suit.trouser_fast_side == '1' %><br>
     </div>
 
     <div id="trousers_cuff">
         <h4>Cuff</h4>
-        None
-        <%= @suit.trouser_cuff_none %><br>
-        Other
-        <%= @suit.trouser_cuff_other %>    
+       
+        <%= "None" if  @suit.trouser_cuff_none == '1' %><br>
+        
+        <%= "Other" if @suit.trouser_cuff_other == '1' %>    
         <%= @suit.trouser_cuff_other_note %><br> 
     </div>
     <div id="trousers_note">

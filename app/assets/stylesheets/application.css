@@ -16,12 +16,13 @@
   font-family: 'Mr De Haviland';
   font-style: normal;
   font-weight: 400;
-  src:  url('http://www.wupcdn.com/jtoor/Mr-DeHaviland.ttf') format('truetype');
+  src:url('http://www.wupcdn.com/jtoor/Mr-DeHaviland.ttf') format('truetype');
+
 }
 
- h4 {
- 	font-weight: normal;
- 	text-decoration: underline;
+h4 {
+	font-weight: normal;
+	text-decoration: underline;
  }
 
 .blockfield {
@@ -147,7 +148,7 @@
 
 #shirt_material label, #shirt_material h, #jacket_material label, #jacket_material h, 
 #vest_material label, #vest_material h, #trouser_material label, #trouser_material h {
-	font-family: 'Mr De Haviland';
+	font-family: 'Mr De Haviland', cursive;
 	font-size: 30px;
 	margin-right:10px;
 }

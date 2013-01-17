@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130101174332) do
+ActiveRecord::Schema.define(:version => 20130117002006) do
 
   create_table "forms", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -77,11 +77,16 @@ ActiveRecord::Schema.define(:version => 20130101174332) do
     t.string   "material_buttonholeside_outer"
     t.string   "material_buttonholeside_inner"
     t.text     "more_notes"
+    t.string   "jacket_shoulder_to_bust"
+    t.string   "jacket_shoulder_to_waist"
+    t.string   "jacket_bust_to_bust"
+    t.string   "jacket_underbust"
+    t.string   "jacket_shoulder_to_underbust"
   end
 
   create_table "suits", :force => true do |t|
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.string   "phone_number"
     t.string   "customer_name"
     t.string   "address"
@@ -200,6 +205,13 @@ ActiveRecord::Schema.define(:version => 20130101174332) do
     t.string   "trouser_cuff_other_note"
     t.string   "jacket_front_length"
     t.string   "jacket_pockets_ticket"
+    t.string   "inner_stitching_color"
+    t.string   "inner_piping_color"
+    t.string   "jacket_shoulder_to_bust"
+    t.string   "jacket_shoulder_to_waist"
+    t.string   "jacket_bust_to_bust"
+    t.string   "jacket_underbust"
+    t.string   "jacket_shoulder_to_underbust"
   end
 
 end

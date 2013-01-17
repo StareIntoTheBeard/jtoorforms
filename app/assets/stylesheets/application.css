@@ -61,17 +61,26 @@ h4 {
 	width:380px;
 }
 
-#shirt_shouldertype, #jacket_shouldertype {
+#shirt_shouldertype {
 	width:335px;
 	display: inline-block;
 	position: absolute;
 	margin-left:10px;
 }
+
+#jacket_shouldertype {
+	width:335px;
+	display: inline-block;
+	position: absolute;
+	margin-left:415px;
+	margin-top: -657px;
+
+}
 #shirt_balancefigure {
 	width:335px;
 	display: inline-block;
 	position: absolute;
-	margin-left:10px;
+	margin-left:20px;
 	margin-top: 140px;
 }
 
@@ -79,8 +88,8 @@ h4 {
 	width:335px;
 	display: inline-block;
 	position: absolute;
-	margin-left:10px;
-	margin-top: 163px;
+	margin-left:415px;
+	margin-top: -500px;
 }
 
 #shirt_fitting {
@@ -95,8 +104,8 @@ h4 {
 	width:335px;
 	display: inline-block;
 	position: absolute;
-	margin-left:10px;
-	margin-top: 350px;
+	margin-left:415px;
+	margin-top: -300px;
 }
 
 #jacket_lining {
@@ -136,6 +145,16 @@ h4 {
 .materialpad {
 	margin-left: 10px;
 	margin-top:50px;
+}
+
+#jacket_inner_color {
+	margin-left: 10px;
+}
+
+#jacket_inner_color h {
+	font-family: 'Mr De Haviland', cursive;
+	font-size: 30px;	
+	padding-right:10px;
 }
 
 #jacket_undercollar {

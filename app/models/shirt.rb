@@ -5,7 +5,8 @@ class Shirt < ActiveRecord::Base
     :measure_sleeve, :measure_hips, :shoulder_type, :shoulder_type, :balance_figure,:fitting,:shirt_material,:material_collar,
     :material_inner_collar,:material_under_collar,:material_buttonside_outer,:material_buttonside_inner,:material_buttonholeside_outer,
     :material_buttonholeside_inner, :material_cuffs, :material_inner_cuffs,:cuff_style,:collar_style,:button_color,
-    :button_stitching_color,:button_hole_color,:pockets, :detailing, :detailing_color, :notes, :more_notes
+    :button_stitching_color,:button_hole_color,:pockets, :detailing, :detailing_color, :notes, :more_notes,:jacket_shoulder_to_bust, :jacket_shoulder_to_waist, :jacket_bust_to_bust, :jacket_underbust, :jacket_shoulder_to_underbust
+
 
   default_scope :order => 'created_at ASC'
   has_attached_file :photo_front,

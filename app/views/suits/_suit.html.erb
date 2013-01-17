@@ -53,6 +53,12 @@
         <%= @suit.jacket_vest_size %><br>   
         Elbow Length:
         <%= @suit.jacket_elbow %><br>    
+        Shoulder to Bust: <%= @suit.jacket_shoulder_to_bust%> <br />
+        Shoulder to Waist:  <%= @suit.jacket_shoulder_to_waist%><br />
+        Bust to Bust:  <%= @suit.jacket_bust_to_bust %><br />
+        Underbust: <%= @suit.jacket_underbust%> <br />
+        Shoulder to Underbust: <%= @suit.jacket_shoulder_to_underbust %> <br />
+
     </div>
 
     <div id="jacket_shouldertype" class="blockfield additionalpad">
@@ -103,11 +109,18 @@
     </div>
     <div id="jacket_material" class="materialpad">
         <h>Jacket</h>&nbsp;&nbsp;&nbsp;
-        <span class="padded"?<h>Material:</h>
+        <span class="padded"><h>Material:</h>
         <%= @suit.jacket_material %> </span>
         <span class="padded"><h>Lining:</h>
         <%= @suit.jacket_lining %></span>
-    </div>
+    </div><br>
+
+    <div id="jacket_inner_color" class="additionalpad">
+        <span class="padded"><h>Inner Piping Color:</h><%= @suit.inner_piping_color %></span>
+        <span class="padded"><h>Inner Stitching Color:</h><%= @suit.inner_stitching_color %></span>
+
+    </div><br>
+
     <div id="jacket_undercollar" class="additionalpad"><br>
         <span class="padded"><h>Under Collar</h>
         <%= @suit.jacket_under_collar %><br></span><br>

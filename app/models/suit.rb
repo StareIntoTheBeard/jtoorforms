@@ -14,7 +14,8 @@ class Suit < ActiveRecord::Base
   	:vest_detailing_piping, :vest_detailing_welting, :vest_detailing_color, :vest_button_color, :vest_button_stitch, :vest_buttonhole,
   	:vest_note, :trouser_material, :trouser_front_pocket, :trouser_pleat, :trouser_rear_left, :trouser_rear_right, :trouser_rear_flaps,
   	:trouser_rear_button, :trouser_rear_none, :trouser_fast_button, :trouser_fast_clips, :trouser_fast_belt, :trouser_fast_side, :trouser_cuff_none,
-  	:trouser_cuff_other, :trouser_cuff_other_note, :trouser_note
+  	:trouser_cuff_other, :trouser_cuff_other_note, :trouser_note, :inner_piping_color, :inner_stitching_color, :jacket_shoulder_to_bust, :jacket_shoulder_to_waist, :jacket_bust_to_bust, :jacket_underbust, :jacket_shoulder_to_underbust
+
 
 
   default_scope :order => 'created_at ASC'

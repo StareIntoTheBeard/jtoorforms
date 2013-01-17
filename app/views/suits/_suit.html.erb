@@ -4,20 +4,11 @@
 
     <div id="customerinfo" class="blockfield">
     <h3>Customer Information</h3>
-        Customer Name:
-        <%= @suit.customer_name %>
-        Phone Number:
-        <%= @suit.phone_number %><br>
-        Address:
-        <%= @suit.address %>
-        City:
-        <%= @suit.city %><br>
-        State:
-        <%= @suit.state %>
-        Zip:
-        <%= @suit.zip %>
-        Email:
-        <%= @suit.email %><br>
+    <span class= "padded">Customer Name: <%= @suit.customer_name %></span><span class= "padded"> Phone Number:<%= @suit.phone_number %></span><br /><br>
+    <span class= "padded">Address: <%= @suit.address %></span> <span class= "padded">City: <%= @suit.city %></span> <br /><br>
+    <span class= "padded">State: <%= @suit.state %></span>
+    <span class= "padded">Zip: <%= @suit.zip %></span>
+    <span class= "padded">Email: <%= @suit.email %> </span><br />
     </div>
 
     <div id="jacketmeasurements" class="blockfield additionalpad">
@@ -112,19 +103,19 @@
     </div>
     <div id="jacket_material" class="materialpad">
         <h>Jacket</h>&nbsp;&nbsp;&nbsp;
-        <h>Material:</h>
-        <%= @suit.jacket_material %> &nbsp;&nbsp;
-        <h>Lining:</h>
-        <%= @suit.jacket_lining %>
+        <span class="padded"?<h>Material:</h>
+        <%= @suit.jacket_material %> </span>
+        <span class="padded"><h>Lining:</h>
+        <%= @suit.jacket_lining %></span>
     </div>
-    <div id="jacket_undercollar" class="additionalpad">
-        <h>Under Collar</h>
-        <%= @suit.jacket_under_collar %><br>
+    <div id="jacket_undercollar" class="additionalpad"><br>
+        <span class="padded"><h>Under Collar</h>
+        <%= @suit.jacket_under_collar %><br></span><br>
 
-		Felt Color: 
-        <%= @suit.jacket_felt_color %>    
-        Logo Stitch Color: 
-        <%= @suit.jacket_logo_stitch_color %><br>
+		<span class="padded">Felt Color: 
+        <%= @suit.jacket_felt_color %></span>
+        <span class="padded">Logo Stitch Color: 
+        <%= @suit.jacket_logo_stitch_color %><br></span><br>
     </div>
     <div id ="jacket_singlebreasted" class="additionalpad">
         <h4>Single Breasted</h4>
@@ -252,7 +243,7 @@
         <%= @suit.vest_note %><br> 
     </div>
     <div id="trouser_material" class="materialpad">
-       <h>Trousers Material:</h>
+       <h>Trousers/Skirt &nbsp; Material:</h>
         <%= @suit.trouser_material %><br>   
     </div>        
     <div id="trousers_frontpockets">

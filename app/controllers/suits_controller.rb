@@ -115,6 +115,6 @@ class SuitsController < ApplicationController
       kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')
       kit.stylesheets << 'public/assets/application.css'
       @thepdf = kit.to_pdf
-      @filename = 'Suit' +@suit.id.to_s + '.pdf'
+      @filename = @suit.customer_name + ' - ' + Date.today.to_s + '.pdf'
     end
 end

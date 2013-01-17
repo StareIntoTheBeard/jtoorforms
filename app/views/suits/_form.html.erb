@@ -40,7 +40,7 @@
         <%= f.text_field :jacket_neck %><br>    
         <%= f.label :jacket_overarm, "Overarm:" %> 
         <%= f.text_field :jacket_overarm %><br>
-        <%= f.label :jacket_chest, "Chest:" %> 
+        <%= f.label :jacket_chest, "Chest/Bust:" %> 
         <%= f.text_field :jacket_chest %><br>
         <%= f.label :jacket_stomach, "Stomach:" %> 
         <%= f.text_field :jacket_stomach %><br>
@@ -90,8 +90,8 @@
 
     <div id="jacket_balancefigure" class="blockfield additionalpad">
         <h3>Balance Figure</h3>
-        <%= f.label :balance_figure, "Erect/Full Chest" %>
-        <%= f.radio_button :balance_figure, "Erect/Full Chest" %><br>
+        <%= f.label :balance_figure, "Erect/Full Chest/Bust" %>
+        <%= f.radio_button :balance_figure, "Erect/Full Chest/Bust" %><br>
         <%= f.label :balance_figure, "Forward Neck" %>
         <%= f.radio_button :balance_figure, "Forward Neck" %><br>
         <%= f.label :balance_figure, "Normal Posture" %>
@@ -230,9 +230,9 @@
         <%= f.check_box :jacket_pockets_patched %><br>
         <%= f.label :jacket_pockets_flaps, "Flaps" %> 
         <%= f.check_box :jacket_pockets_flaps %><br>
-        <%= f.label :jacket_pockets_normal, "Normal Chest" %> 
+        <%= f.label :jacket_pockets_normal, "Normal Chest/Bust" %> 
         <%= f.check_box :jacket_pockets_normal %><br>
-        <%= f.label :jacket_pockets_patch, "Patch Chest" %> 
+        <%= f.label :jacket_pockets_patch, "Patch Chest/Bust" %> 
         <%= f.check_box :jacket_pockets_patch %><br>
     </div>
 
@@ -339,7 +339,7 @@
         <%= f.text_area :vest_note %><br> 
     </div>
     <div id="trouser_material" class="materialpad">
-        <%= f.label :trouser_material, "Trousers  Material:" %> 
+        <%= f.label :trouser_material, "Trousers/Skirt   Material:" %> 
         <%= f.text_field :trouser_material %><br>   
     </div>        
     <div id="trousers_frontpockets">

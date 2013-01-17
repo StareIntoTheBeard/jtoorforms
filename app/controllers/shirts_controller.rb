@@ -133,7 +133,7 @@ class ShirtsController < ApplicationController
       kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')
       kit.stylesheets << 'public/assets/application.css'
       @thepdf = kit.to_pdf
-      @filename = 'Shirt' +@shirt.id.to_s + '.pdf'
+      @filename = @shirt.customer_name + ' - ' + Date.today.to_s + '.pdf'
     end
 
 end

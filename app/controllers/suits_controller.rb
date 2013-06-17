@@ -109,7 +109,7 @@ class SuitsController < ApplicationController
   end
 
     def turntopdf
-     @suit = Suit.find(params[:id])
+      @suit = Suit.find(params[:id])
       @output = render_to_string :partial => 'suit'
 
       kit = PDFKit.new(@output.html_safe, :page_size => 'Letter')

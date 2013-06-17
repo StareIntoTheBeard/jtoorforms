@@ -1,0 +1,3 @@
+class Jacket < ActiveRecord::Base
+  # attr_accessible :title, :body
+end

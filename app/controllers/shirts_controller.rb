@@ -16,7 +16,7 @@ class ShirtsController < ApplicationController
   # GET /shirts/1
   # GET /shirts/1.json
   def show
-@shirt = Shirt.find(params[:id])
+    @shirt = Shirt.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @shirt }

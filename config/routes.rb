@@ -1,4 +1,6 @@
 Jtoor::Application.routes.draw do
+  resources :jackets
+
   resources :suits
 
   resources :shirts 
